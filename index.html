@@ -38,6 +38,35 @@
   </header>
 
   <main>
+    <!-- Carousel Section -->
+    <section id="main-carousel">
+      <div class="carousel-container">
+        <div class="carousel-slide active">
+          <!-- Placeholder images or existing ones repurposed -->
+          <img src="images/Cuerina Premium.png" alt="Ofertas Especiales" class="carousel-bg">
+          <div class="carousel-overlay">
+            <div class="carousel-content">
+              <h2>Grandes Ofertas de Temporada</h2>
+              <p>Aprovecha hasta 50% de descuento en hilos seleccionados</p>
+              <a href="#promociones" class="carousel-btn">Ver Ofertas</a>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="images/accesorios.png" alt="Nuevos Ingresos" class="carousel-bg">
+          <div class="carousel-overlay">
+            <div class="carousel-content">
+              <h2>Lo Nuevo en Cread</h2>
+              <p>Descubre las últimas tendencias en materiales</p>
+              <a href="#novedades" class="carousel-btn">Ver Novedades</a>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control prev" onclick="moveSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+        <button class="carousel-control next" onclick="moveSlide(1)"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </section>
+
     <section id="hero">
       <div class="hero-content">
         <div class="hero-text">
@@ -69,41 +98,252 @@
       </div>
     </section>
 
-    <section id="destacados">
+    <!-- Novedades Section -->
+    <section id="novedades" class="product-section">
       <div class="section-header">
-        <h2>Productos Destacados</h2>
+        <h2>Novedades</h2>
+        <p>Los últimos ingresos para tus proyectos</p>
+      </div>
+      <div class="productos-grid">
+        <div class="producto-card">
+          <div class="producto-img">
+            <img src="images/accesorios.png" alt="Kit de Agujas">
+            <span class="badge-new">Nuevo</span>
+          </div>
+          <h3>Kit de Agujas Premium</h3>
+          <p class="descripcion">Set completo de agujas para diferentes tejidos</p>
+          <p class="precio">S/ 25.00</p>
+          <button class="add-to-cart">Agregar al carrito</button>
+        </div>
+        <div class="producto-card">
+          <div class="producto-img">
+            <img src="images/Hilos.png" alt="Hilo Neón">
+            <span class="badge-new">Nuevo</span>
+          </div>
+          <h3>Hilo Poliéster Neón</h3>
+          <p class="descripcion">Colores vibrantes para acabados únicos</p>
+          <p class="precio">S/ 8.50</p>
+          <button class="add-to-cart">Agregar al carrito</button>
+        </div>
+        <div class="producto-card">
+          <div class="producto-img">
+            <img src="images/Cuerina Premium.png" alt="Cuerina Estampada">
+            <span class="badge-new">Nuevo</span>
+          </div>
+          <h3>Cuerina Estampada</h3>
+          <p class="descripcion">Nuevos diseños florales y geométricos</p>
+          <p class="precio">S/ 15.90</p>
+          <button class="add-to-cart">Agregar al carrito</button>
+        </div>
+        <div class="producto-card">
+          <div class="producto-img">
+            <img src="images/accesorios.png" alt="Tijeras de Sastre">
+            <span class="badge-new">Nuevo</span>
+          </div>
+          <h3>Tijeras Profesionales</h3>
+          <p class="descripcion">Corte preciso y ergonómico</p>
+          <p class="precio">S/ 45.00</p>
+          <button class="add-to-cart">Agregar al carrito</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Promociones Section -->
+    <section id="promociones" class="product-section bg-light">
+      <div class="section-header">
+        <h2>Promociones</h2>
+        <p>¡Ofertas que no puedes dejar pasar!</p>
+      </div>
+      <div class="productos-grid">
+        <div class="producto-card promo-card">
+          <div class="producto-img">
+            <img src="images/Hilos.png" alt="Pack Hilos">
+            <span class="badge-promo">3x2</span>
+          </div>
+          <h3>Pack Hilos Básicos</h3>
+          <p class="descripcion">Lleva 3 y paga 2 en colores básicos</p>
+          <div class="price-container">
+            <span class="old-price">S/ 38.70</span>
+            <span class="precio">S/ 25.80</span>
+          </div>
+          <button class="add-to-cart">Agregar al carrito</button>
+        </div>
+        <div class="producto-card promo-card">
+          <div class="producto-img">
+            <img src="images/Cierres.png" alt="Pack Cierres">
+            <span class="badge-promo">-20%</span>
+          </div>
+          <h3>Pack 10 Cierres</h3>
+          <p class="descripcion">Surtido de cierres de 20cm</p>
+          <div class="price-container">
+            <span class="old-price">S/ 25.00</span>
+            <span class="precio">S/ 20.00</span>
+          </div>
+          <button class="add-to-cart">Agregar al carrito</button>
+        </div>
+        <div class="producto-card promo-card">
+          <div class="producto-img">
+            <img src="images/maquinas.png" alt="Combo Inicio">
+            <span class="badge-promo">Combo</span>
+          </div>
+          <h3>Kit de Inicio Costura</h3>
+          <p class="descripcion">Tijera + Cinta + Tiza + Agujas</p>
+          <div class="price-container">
+            <span class="old-price">S/ 65.00</span>
+            <span class="precio">S/ 49.90</span>
+          </div>
+          <button class="add-to-cart">Agregar al carrito</button>
+        </div>
+        <div class="producto-card promo-card">
+          <div class="producto-img">
+            <img src="images/Cuerina Premium.png" alt="Retazos Cuerina">
+            <span class="badge-promo">2x1</span>
+          </div>
+          <h3>Retazos Cuerina</h3>
+          <p class="descripcion">Pack de retazos seleccionados (1kg)</p>
+          <div class="price-container">
+            <span class="old-price">S/ 30.00</span>
+            <span class="precio">S/ 15.00</span>
+          </div>
+          <button class="add-to-cart">Agregar al carrito</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Productos Más Buscados Section -->
+    <section id="mas-buscados" class="product-section">
+      <div class="section-header">
+        <h2>Productos Más Buscados</h2>
         <p>Los favoritos de nuestra comunidad</p>
       </div>
       <div class="productos-grid">
         <div class="producto-card">
           <div class="producto-img">
             <img src="images/Cuerina Premium.png" alt="Cuerina Premium">
+            <span class="badge-trend"><i class="fas fa-fire"></i> Hot</span>
           </div>
           <h3>Cuerina Premium</h3>
-          <p class="descripcion">Material sintético de alta calidad para confección de bolsos y accesorios</p>
-          <p class="precio">Desde S/10.90 por 1/2 metro</p>
+          <p class="descripcion">Material sintético de alta calidad</p>
+          <p class="precio">S/ 10.90</p>
           <button class="add-to-cart">Agregar al carrito</button>
         </div>
-
         <div class="producto-card">
           <div class="producto-img">
-            <img src="images/Hilos.png" alt="Hilos de Calidad">
+            <img src="images/Hilos.png" alt="Hilos Premium">
+            <span class="badge-trend"><i class="fas fa-fire"></i> Hot</span>
           </div>
           <h3>Hilos Premium</h3>
           <p class="descripcion">Hilos resistentes para costuras perfectas</p>
-          <p class="precio">Desde S/12.90</p>
+          <p class="precio">S/ 12.90</p>
           <button class="add-to-cart">Agregar al carrito</button>
         </div>
-
         <div class="producto-card">
           <div class="producto-img">
-            <img src="images/Cierres.png" alt="Cierres de Metal">
+            <img src="images/Cierres.png" alt="Cierres Metálicos">
           </div>
           <h3>Cierres Metálicos</h3>
-          <p class="descripcion">Cierres de alta resistencia para bolsos</p>
-          <p class="precio">Desde S/8.90</p>
+          <p class="descripcion">Cierres fuertes para bolsos</p>
+          <p class="precio">S/ 8.90</p>
           <button class="add-to-cart">Agregar al carrito</button>
         </div>
+        <div class="producto-card">
+          <div class="producto-img">
+            <img src="images/maquinas.png" alt="Máquina Recta">
+          </div>
+          <h3>Aceite para Máquina</h3>
+          <p class="descripcion">Lubricante esencial para mantenimiento</p>
+          <p class="precio">S/ 15.00</p>
+          <button class="add-to-cart">Agregar al carrito</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Venta de Liquidación Section -->
+    <section id="liquidacion" class="product-section bg-light">
+      <div class="section-header">
+        <h2>Venta de Liquidación</h2>
+        <p>Últimas unidades a precios increíbles</p>
+      </div>
+      <div class="productos-grid">
+        <div class="producto-card">
+          <div class="producto-img">
+            <img src="images/accesorios.png" alt="Botones Vintage">
+            <span class="badge-sale">Liquidación</span>
+          </div>
+          <h3>Botones Vintage</h3>
+          <p class="descripcion">Modelos discontinuados</p>
+          <div class="price-container">
+            <span class="old-price">S/ 15.00</span>
+            <span class="precio-liquid">S/ 5.00</span>
+          </div>
+          <button class="add-to-cart">Agregar al carrito</button>
+        </div>
+        <div class="producto-card">
+          <div class="producto-img">
+            <img src="images/Hilos.png" alt="Lana Fantasía">
+            <span class="badge-sale">Liquidación</span>
+          </div>
+          <h3>Lana Fantasía</h3>
+          <p class="descripcion">Últimos ovillos disponibles</p>
+          <div class="price-container">
+            <span class="old-price">S/ 18.00</span>
+            <span class="precio-liquid">S/ 9.90</span>
+          </div>
+          <button class="add-to-cart">Agregar al carrito</button>
+        </div>
+        <div class="producto-card">
+          <div class="producto-img">
+            <img src="images/Cuerina Premium.png" alt="Retazos Varios">
+            <span class="badge-sale">Liquidación</span>
+          </div>
+          <h3>Saldos de Telas</h3>
+          <p class="descripcion">Piezas finales de rollo</p>
+          <div class="price-container">
+            <span class="old-price">S/ 25.00</span>
+            <span class="precio-liquid">S/ 12.00</span>
+          </div>
+          <button class="add-to-cart">Agregar al carrito</button>
+        </div>
+        <div class="producto-card">
+          <div class="producto-img">
+            <img src="images/maquinas.png" alt="Repuestos Antiguos">
+            <span class="badge-sale">Liquidación</span>
+          </div>
+          <h3>Repuestos Varios</h3>
+          <p class="descripcion">Para modelos antiguos</p>
+          <div class="price-container">
+            <span class="old-price">S/ 10.00</span>
+            <span class="precio-liquid">S/ 2.00</span>
+          </div>
+          <button class="add-to-cart">Agregar al carrito</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="categorias">
+      <h2>Nuestras Categorías</h2>
+      <div class="categorias-container">
+        <a href="materiales.html" class="categoria">
+          <div class="categoria-img">
+            <img src="images/Cuerina Premium.png" alt="Materiales">
+          </div>
+          <h3>Materiales</h3>
+          <p>Descubre nuestra selección de materiales de alta calidad</p>
+        </a>
+        <a href="accesorios.html" class="categoria">
+          <div class="categoria-img">
+            <img src="images/accesorios.png" alt="Accesorios">
+          </div>
+          <h3>Accesorios</h3>
+          <p>Explora nuestra colección de accesorios</p>
+        </a>
+        <a href="maquinas.html" class="categoria">
+          <div class="categoria-img">
+            <img src="images/maquinas.png" alt="Máquinas">
+          </div>
+          <h3>Máquinas</h3>
+          <p>Encuentra las mejores máquinas para tu trabajo</p>
+        </a>
       </div>
     </section>
 
@@ -138,33 +378,6 @@
               class="btn-clase" target="_blank">Más Información</a>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section id="categorias">
-      <h2>Nuestras Categorías</h2>
-      <div class="categorias-container">
-        <a href="materiales.html" class="categoria">
-          <div class="categoria-img">
-            <img src="images/Cuerina Premium.png" alt="Materiales">
-          </div>
-          <h3>Materiales</h3>
-          <p>Descubre nuestra selección de materiales de alta calidad</p>
-        </a>
-        <a href="accesorios.html" class="categoria">
-          <div class="categoria-img">
-            <img src="images/accesorios.png" alt="Accesorios">
-          </div>
-          <h3>Accesorios</h3>
-          <p>Explora nuestra colección de accesorios</p>
-        </a>
-        <a href="maquinas.html" class="categoria">
-          <div class="categoria-img">
-            <img src="images/maquinas.png" alt="Máquinas">
-          </div>
-          <h3>Máquinas</h3>
-          <p>Encuentra las mejores máquinas para tu trabajo</p>
-        </a>
       </div>
     </section>
 
