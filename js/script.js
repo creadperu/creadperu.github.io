@@ -98,10 +98,20 @@ document.addEventListener('DOMContentLoaded', function () {
   addToCartButtons.forEach(button => {
     button.addEventListener('click', () => {
       const card = button.closest('.material-card, .producto-card');
+
+      // Determine price element
+      const priceElement = card.querySelector('.precio-liquid') ||
+        card.querySelector('.precio') ||
+        card.querySelector('.material-price');
+
+      let priceText = priceElement ? priceElement.textContent : '0';
+      // Clean price string
+      priceText = priceText.replace('S/', '').replace('From ', '').replace(' por metro', '').trim();
+
       const product = {
         id: Date.now(), // Unique identifier
         name: card.querySelector('h3').textContent,
-        price: parseFloat(card.querySelector('.material-price, .precio').textContent.replace('S/', '').replace(' por metro', '')),
+        price: parseFloat(priceText),
         image: card.querySelector('img').src,
         quantity: 1
       };
@@ -277,7 +287,8 @@ document.addEventListener('DOMContentLoaded', function () {
       animation: 'slideIn 0.3s ease-out',
       display: 'flex',
       alignItems: 'center',
-      gap: '10px'
+      gap: '10px',
+      zIndex: 10000
     });
 
     document.body.appendChild(notification);
@@ -315,24 +326,26 @@ document.addEventListener('DOMContentLoaded', function () {
   // Enhanced form validation
   const newsletterForm = document.querySelector('.newsletter-form');
 
-  newsletterForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const emailInput = newsletterForm.querySelector('input');
-    const email = emailInput.value;
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const emailInput = newsletterForm.querySelector('input');
+      const email = emailInput.value;
 
-    if (!email) {
-      showNotification('Por favor ingresa tu email', 'error');
-      return;
-    }
+      if (!email) {
+        showNotification('Por favor ingresa tu email', 'error');
+        return;
+      }
 
-    if (!isValidEmail(email)) {
-      showNotification('Por favor ingresa un email válido', 'error');
-      return;
-    }
+      if (!isValidEmail(email)) {
+        showNotification('Por favor ingresa un email válido', 'error');
+        return;
+      }
 
-    showNotification('¡Gracias por suscribirte!');
-    newsletterForm.reset();
-  });
+      showNotification('¡Gracias por suscribirte!');
+      newsletterForm.reset();
+    });
+  }
 
   function isValidEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -342,9 +355,38 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
     });
   });
+
+  // Carousel Functionality
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('.carousel-slide');
+
+  // Make moveSlide global for onclick handlers
+  window.moveSlide = function (n) {
+    showSlides(slideIndex += n);
+  };
+
+  function showSlides(n) {
+    if (!slides.length) return;
+
+    if (n >= slides.length) { slideIndex = 0 }
+    if (n < 0) { slideIndex = slides.length - 1 }
+
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[slideIndex].classList.add('active');
+  }
+
+  // Auto slide
+  if (slides.length > 0) {
+    setInterval(() => {
+      window.moveSlide(1);
+    }, 5000); // 5 seconds
+  }
 });
