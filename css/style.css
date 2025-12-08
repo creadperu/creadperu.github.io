@@ -1522,7 +1522,82 @@ nav {
     height: 300px;
   }
 
+  .carousel-content {
+    padding: 1rem;
+    max-width: 90%;
+  }
+
   .carousel-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .carousel-content p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .carousel-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  /* Specific image adjustments for mobile */
+  .producto-img,
+  .categoria-img,
+  .clase-img,
+  .material-img {
+    height: 200px;
+    /* Limit height on mobile */
+  }
+
+  .hero-content {
+    gap: 2rem;
+  }
+
+  .client-image {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  #main-carousel {
+    height: 250px;
+    margin-top: 60px;
+    /* Smaller offset for mobile header if needed, though header is fixed */
+  }
+
+  /* Ensure text doesn't overflow on very small screens */
+  .carousel-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .carousel-content p {
+    font-size: 0.8rem;
+    display: none;
+    /* Hide description on very small screens if needed, or keep short */
+  }
+
+  .producto-img,
+  .categoria-img,
+  .clase-img,
+  .material-img {
+    height: 160px;
+    /* Smaller height for very small screens */
+  }
+
+  .logo h1 {
     font-size: 1.8rem;
   }
+
+  .logo img {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+/* Global Image Responsiveness Fix */
+img {
+  max-width: 100%;
+  height: auto;
 }
