@@ -1,27 +1,33 @@
+<!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cread - Materiales & Accesorios</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <title>Cread - Materiales, Accesorios y Clases</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&family=Outfit:wght@300;400;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
   <header>
     <nav>
-      <div class="logo">
-        <img src="Logo-cread.webp" alt="Cread Logo">
+      <a href="index.html" class="logo">
+        <img src="images/Logo-cread.webp" alt="Cread Logo">
         <div class="logo-text">
           <h1>Cread</h1>
           <span class="tagline">Crea sin límites</span>
         </div>
-      </div>
+      </a>
       <ul class="nav-links">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="materiales.html">Materiales</a></li>
         <li><a href="accesorios.html">Accesorios</a></li>
         <li><a href="maquinas.html">Máquinas</a></li>
+        <li><a href="#clases">Clases</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
       <div class="cart-icon">
@@ -35,32 +41,53 @@
     <section id="hero">
       <div class="hero-content">
         <div class="hero-text">
-          <h1>Descubre nuestros productos exclusivos</h1>
-          <p>Materiales y accesorios de alta calidad para tus proyectos</p>
-          <a href="#catalogo" class="cta-button">Ver Catálogo</a>
+          <h1>Todo para tu creatividad en un solo lugar</h1>
+          <p>Materiales, máquinas, accesorios y las mejores clases para tus proyectos de confección.</p>
+          <div class="hero-buttons">
+            <a href="materiales.html" class="cta-button">Ver Catálogo</a>
+            <a href="#clases" class="cta-button btn-outline">Ver Clases</a>
+          </div>
         </div>
         <div class="hero-image">
-          <img src="Cuerina Premium.png" alt="Cuerina Premium" class="client-image">
+          <img src="images/Cuerina Premium.png" alt="Cuerina Premium" class="client-image">
         </div>
       </div>
     </section>
 
+    <section id="features-banner">
+      <div class="feature-item">
+        <i class="fas fa-truck"></i>
+        <p>Envíos a todo el Perú</p>
+      </div>
+      <div class="feature-item">
+        <i class="fas fa-credit-card"></i>
+        <p>Pagos Seguros</p>
+      </div>
+      <div class="feature-item">
+        <i class="fas fa-chalkboard-teacher"></i>
+        <p>Clases Especializadas</p>
+      </div>
+    </section>
+
     <section id="destacados">
-      <h2>Productos Destacados</h2>
+      <div class="section-header">
+        <h2>Productos Destacados</h2>
+        <p>Los favoritos de nuestra comunidad</p>
+      </div>
       <div class="productos-grid">
         <div class="producto-card">
           <div class="producto-img">
-            <img src="Cuerina Premium.png" alt="Cuerina Premium">
+            <img src="images/Cuerina Premium.png" alt="Cuerina Premium">
           </div>
           <h3>Cuerina Premium</h3>
           <p class="descripcion">Material sintético de alta calidad para confección de bolsos y accesorios</p>
           <p class="precio">Desde S/10.90 por 1/2 metro</p>
           <button class="add-to-cart">Agregar al carrito</button>
         </div>
-        
+
         <div class="producto-card">
           <div class="producto-img">
-            <img src="Hilos.png" alt="Hilos de Calidad">
+            <img src="images/Hilos.png" alt="Hilos de Calidad">
           </div>
           <h3>Hilos Premium</h3>
           <p class="descripcion">Hilos resistentes para costuras perfectas</p>
@@ -70,7 +97,7 @@
 
         <div class="producto-card">
           <div class="producto-img">
-            <img src="Cierres.png" alt="Cierres de Metal">
+            <img src="images/Cierres.png" alt="Cierres de Metal">
           </div>
           <h3>Cierres Metálicos</h3>
           <p class="descripcion">Cierres de alta resistencia para bolsos</p>
@@ -80,61 +107,156 @@
       </div>
     </section>
 
+    <section id="clases">
+      <div class="section-header">
+        <h2>Aprende y Emprende</h2>
+        <p>Domina el arte de la confección con nuestras clases</p>
+      </div>
+      <div class="clases-container">
+        <div class="clase-card">
+          <div class="clase-img">
+            <!-- Placeholder or generic image -->
+            <img src="images/patchwork.png" alt="Clases Virtuales">
+            <span class="badge virtual">Virtual</span>
+          </div>
+          <div class="clase-content">
+            <h3>Clases Virtuales</h3>
+            <p>Aprende desde la comodidad de tu casa. Acceso a videos paso a paso y asesoría personalizada.</p>
+            <a href="https://wa.me/51985605911?text=Hola,%20deseo%20información%20sobre%20las%20clases%20virtuales"
+              class="btn-clase" target="_blank">Más Información</a>
+          </div>
+        </div>
+        <div class="clase-card">
+          <div class="clase-img">
+            <img src="images/maquinas.png" alt="Talleres Presenciales">
+            <span class="badge presencial">Presencial</span>
+          </div>
+          <div class="clase-content">
+            <h3>Talleres Presenciales</h3>
+            <p>Experiencia práctica con nuestras máquinas y materiales. Guía experta incluida.</p>
+            <a href="https://wa.me/51985605911?text=Hola,%20deseo%20información%20sobre%20los%20talleres%20presenciales"
+              class="btn-clase" target="_blank">Más Información</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="categorias">
       <h2>Nuestras Categorías</h2>
       <div class="categorias-container">
         <a href="materiales.html" class="categoria">
           <div class="categoria-img">
-            <img src="Cuerina Premium.png" alt="Materiales">
+            <img src="images/Cuerina Premium.png" alt="Materiales">
           </div>
           <h3>Materiales</h3>
           <p>Descubre nuestra selección de materiales de alta calidad</p>
         </a>
         <a href="accesorios.html" class="categoria">
           <div class="categoria-img">
-            <img src="accesorios.png" alt="Accesorios">
+            <img src="images/accesorios.png" alt="Accesorios">
           </div>
           <h3>Accesorios</h3>
           <p>Explora nuestra colección de accesorios</p>
         </a>
         <a href="maquinas.html" class="categoria">
           <div class="categoria-img">
-            <img src="maquinas.png" alt="Máquinas">
+            <img src="images/maquinas.png" alt="Máquinas">
           </div>
           <h3>Máquinas</h3>
           <p>Encuentra las mejores máquinas para tu trabajo</p>
         </a>
       </div>
     </section>
+
+    <section id="contacto">
+      <div class="contacto-container">
+        <div class="contacto-info">
+          <h2>Contáctanos</h2>
+          <p>Estamos aquí para ayudarte en tus proyectos.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <p><a href="mailto:pedidos@creadperu.com">pedidos@creadperu.com</a></p>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <p>(+51) 985605911</p>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>Lima, Perú</p>
+            </div>
+          </div>
+          <div class="social-links-contact">
+            <a href="https://www.facebook.com/share/1CcZ13brkQ/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/cread_peru?igsh=dmp5cnEwY25xdXN5" target="_blank"><i
+                class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@creadperu?_r=1&_t=ZS-921uZpGKDs0" target="_blank"><i
+                class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="contacto-form-wrapper">
+          <form class="contacto-form" action="mailto:pedidos@creadperu.com" method="post" enctype="text/plain">
+            <h3>Envíanos un mensaje</h3>
+            <div class="form-group">
+              <input type="text" name="nombre" placeholder="Tu Nombre" required>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Tu Email" required>
+            </div>
+            <div class="form-group">
+              <textarea name="mensaje" placeholder="¿En qué podemos ayudarte?" required></textarea>
+            </div>
+            <button type="submit">Enviar Mensaje</button>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
     <div class="footer-content">
-      <div class="footer-section">
-        <h4>Contacto</h4>
-        <p>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2a5a4f4e434e45596a49584f4b4e5a4f585f04494547">[email&#160;protected]</a></p>
-        <p>Teléfono: (+51) 985605911</p>
-      </div>
-      <div class="footer-section">
-        <h4>Síguenos</h4>
+      <div class="footer-logo-section">
+        <img src="images/c_logo_rounded.png" alt="Cread Logo Rounded" class="footer-logo">
+        <p class="footer-tagline">Tu aliado en costura y confección artesanal</p>
         <div class="social-links">
-          <a href="https://facebook.com/creadperu" target="_blank">
+          <a href="https://www.facebook.com/share/1CcZ13brkQ/" target="_blank">
             <i class="fab fa-facebook"></i>
           </a>
-          <a href="https://instagram.com/creadperu" target="_blank">
+          <a href="https://www.instagram.com/cread_peru?igsh=dmp5cnEwY25xdXN5" target="_blank">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="https://tiktok.com/@creadperu" target="_blank">
+          <a href="https://www.tiktok.com/@creadperu?_r=1&_t=ZS-921uZpGKDs0" target="_blank">
             <i class="fab fa-tiktok"></i>
           </a>
         </div>
       </div>
+
       <div class="footer-section">
-        <h4>Newsletter</h4>
-        <form class="newsletter-form">
-          <input type="email" placeholder="Tu email">
-          <button type="submit">Suscribir</button>
-        </form>
+        <h4>Institucional</h4>
+        <ul class="footer-links">
+          <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+          <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+          <li><a href="terminos-condiciones.html">Términos y Condiciones</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Ayuda</h4>
+        <ul class="footer-links">
+          <li><a href="como-comprar.html">Cómo Comprar</a></li>
+          <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+          <li><a href="#contacto">Contáctanos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Enlaces Rápidos</h4>
+        <ul class="footer-links">
+          <li><a href="materiales.html">Materiales</a></li>
+          <li><a href="maquinas.html">Máquinas</a></li>
+          <li><a href="#clases">Clases</a></li>
+        </ul>
       </div>
     </div>
     <div class="footer-bottom">
@@ -142,6 +264,12 @@
     </div>
   </footer>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
+  <a href="https://wa.me/51985605911" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
+
 </html>

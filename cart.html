@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrito de Compras - Cread</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&family=Outfit:wght@300;400;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
   <header>
     <nav>
-      <div class="logo">
-        <img src="Logo-cread.webp" alt="Cread Logo">
+      <a href="index.html" class="logo">
+        <img src="images/Logo-cread.webp" alt="Cread Logo">
         <div class="logo-text">
           <h1>Cread</h1>
           <span class="tagline">Crea sin límites</span>
         </div>
-      </div>
+      </a>
       <ul class="nav-links">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="materiales.html">Materiales</a></li>
         <li><a href="accesorios.html">Accesorios</a></li>
         <li><a href="maquinas.html">Máquinas</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="index.html#clases">Clases</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
       </ul>
       <div class="cart-icon">
         <i class="fas fa-shopping-cart"></i>
@@ -51,15 +56,15 @@
         </div>
         <button class="checkout-button">Proceder al Pago</button>
       </div>
-      
+
       <div class="payment-section">
         <h3>Formas de Pago:</h3>
         <div class="payment-images">
-          <img src="Yape.jpg" alt="Pago con Yape" class="payment-img">
-          <img src="plin.jpg" alt="Pago con Plin" class="payment-img">
+          <img src="images/Yape.jpg" alt="Pago con Yape" class="payment-img">
+          <img src="images/plin.jpg" alt="Pago con Plin" class="payment-img">
         </div>
         <div class="bank-accounts">
-          <img src="cuentas.png" alt="Cuentas Bancarias" class="bank-accounts-img">
+          <img src="images/cuentas.png" alt="Cuentas Bancarias" class="bank-accounts-img">
         </div>
       </div>
     </div>
@@ -67,31 +72,47 @@
 
   <footer>
     <div class="footer-content">
-      <div class="footer-section">
-        <h4>Contacto</h4>
-        <p>Email: pedidos@creadperu.com</p>
-        <p>Teléfono: (+51) 985605911</p>
-      </div>
-      <div class="footer-section">
-        <h4>Síguenos</h4>
+      <div class="footer-logo-section">
+        <img src="images/c_logo_rounded.png" alt="Cread Logo Rounded" class="footer-logo">
+        <p class="footer-tagline">Tu aliado en costura y confección artesanal</p>
         <div class="social-links">
-          <a href="https://facebook.com/creadperu" target="_blank">
+          <a href="https://www.facebook.com/share/1CcZ13brkQ/" target="_blank">
             <i class="fab fa-facebook"></i>
           </a>
-          <a href="https://instagram.com/creadperu" target="_blank">
+          <a href="https://www.instagram.com/cread_peru?igsh=dmp5cnEwY25xdXN5" target="_blank">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="https://tiktok.com/@creadperu" target="_blank">
+          <a href="https://www.tiktok.com/@creadperu?_r=1&_t=ZS-921uZpGKDs0" target="_blank">
             <i class="fab fa-tiktok"></i>
           </a>
         </div>
       </div>
+
       <div class="footer-section">
-        <h4>Newsletter</h4>
-        <form class="newsletter-form">
-          <input type="email" placeholder="Tu email">
-          <button type="submit">Suscribir</button>
-        </form>
+        <h4>Institucional</h4>
+        <ul class="footer-links">
+          <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+          <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+          <li><a href="terminos-condiciones.html">Términos y Condiciones</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Ayuda</h4>
+        <ul class="footer-links">
+          <li><a href="como-comprar.html">Cómo Comprar</a></li>
+          <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+          <li><a href="index.html#contacto">Contáctanos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Enlaces Rápidos</h4>
+        <ul class="footer-links">
+          <li><a href="materiales.html">Materiales</a></li>
+          <li><a href="maquinas.html">Máquinas</a></li>
+          <li><a href="index.html#clases">Clases</a></li>
+        </ul>
       </div>
     </div>
     <div class="footer-bottom">
@@ -99,6 +120,11 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <a href="https://wa.me/51985605911" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="js/script.js"></script>
 </body>
+
 </html>
