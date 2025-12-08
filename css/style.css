@@ -1319,3 +1319,210 @@ nav {
     max-width: 200px;
   }
 }
+
+/* === New Section Styles for Sales Optimization === */
+
+/* Carousel */
+#main-carousel {
+  margin-top: 80px;
+  /* Offset for fixed header */
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+  background: #f0f0f0;
+}
+
+.carousel-container {
+  height: 100%;
+  position: relative;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(64, 224, 208, 0.2), rgba(242, 201, 76, 0.2));
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.carousel-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+  /* Low opacity since we are using product images as background */
+  z-index: 1;
+  filter: blur(2px);
+}
+
+.carousel-overlay {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem 3rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  border: 1px solid rgba(64, 224, 208, 0.3);
+}
+
+.carousel-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.carousel-content p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.carousel-btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(64, 224, 208, 0.3);
+}
+
+.carousel-btn:hover {
+  transform: translateY(-3px);
+  background: var(--secondary-color);
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.carousel-control:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+/* Product Badges */
+.producto-card .producto-img {
+  position: relative;
+  /* Ensure badges are positioned relative to image container */
+}
+
+/* Base Badge Style */
+[class^="badge-"] {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  z-index: 5;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.badge-new {
+  background: #2ecc71;
+  /* Green for new */
+}
+
+.badge-promo {
+  background: var(--secondary-color);
+  /* Yellow/Gold for promos */
+}
+
+.badge-trend {
+  background: #ff7675;
+  /* Red/Pink for trends */
+}
+
+.badge-sale {
+  background: #e74c3c;
+  /* Red for clearance */
+}
+
+/* Pricing Styles */
+.price-container {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.precio-liquid {
+  color: #e74c3c;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Section Colors */
+.bg-light {
+  background-color: #f8f9fa;
+}
+
+.product-section {
+  padding: 3rem 5%;
+}
+
+/* Adjustments to grids for new structure */
+.productos-grid {
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  #main-carousel {
+    height: 300px;
+  }
+
+  .carousel-content h2 {
+    font-size: 1.8rem;
+  }
+}
