@@ -1,371 +1,721 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cread - Materiales, Accesorios y Clases</title>
+  <title>Cread Peru — Materiales, Accesorios y Clases para Bolsos Artesanales</title>
+  <meta name="description" content="Tienda online de materiales, accesorios y máquinas para la fabricación artesanal de bolsos y carteras. Clases virtuales y presenciales. Envíos a todo el Perú.">
   <link rel="stylesheet" href="css/style.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&family=Outfit:wght@300;400;600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Cormorant+Garamond:ital,wght@1,400;1,500;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
-  <header>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar" id="announcement-bar">
+    <p><i class="fas fa-tag" style="margin-right:0.4rem"></i> Envío GRATIS a Lima en compras mayores a S/ 150 &nbsp;|&nbsp; Paga con <strong>Yape</strong> y <strong>Plin</strong></p>
+    <button class="close-btn" id="close-announcement" aria-label="Cerrar anuncio"><i class="fas fa-times"></i></button>
+  </div>
+
+  <!-- Header -->
+  <header id="main-header">
     <nav>
-      <a href="index.html" class="logo">
-        <img src="images/Logo-cread.webp" alt="Cread Logo">
+      <a href="#inicio" class="logo">
+        <img src="images/Logo-cread.webp" alt="Cread Peru Logo">
         <div class="logo-text">
-          <h1>Cread</h1>
-          <span class="tagline">Crea sin límites</span>
+          <span class="logo-name">Cread</span>
+          <span class="logo-tagline">Crea sin límites</span>
         </div>
       </a>
       <ul class="nav-links">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="materiales.html">Materiales</a></li>
-        <li><a href="accesorios.html">Accesorios</a></li>
-        <li><a href="maquinas.html">Máquinas</a></li>
+        <li><a href="#inicio" class="active">Inicio</a></li>
+        <li><a href="#materiales">Materiales</a></li>
+        <li><a href="#accesorios">Accesorios</a></li>
+        <li><a href="#maquinas">Máquinas</a></li>
         <li><a href="#clases">Clases</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
-      <div class="cart-icon">
-        <i class="fas fa-shopping-cart"></i>
-        <span class="cart-count">0</span>
+      <div class="nav-right">
+        <div class="cart-icon" title="Ver carrito">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count">0</span>
+        </div>
       </div>
     </nav>
   </header>
 
   <main>
-    <!-- Carousel Section -->
-    <section id="main-carousel">
-      <div class="carousel-container">
-        <div class="carousel-slide active">
-          <!-- Placeholder images or existing ones repurposed -->
-          <img src="images/Cuerina Premium.png" alt="Ofertas Especiales" class="carousel-bg">
-          <div class="carousel-overlay">
-            <div class="carousel-content">
-              <h2>Grandes Ofertas de Temporada</h2>
-              <p>Aprovecha hasta 50% de descuento en hilos seleccionados</p>
-              <a href="#promociones" class="carousel-btn">Ver Ofertas</a>
+
+    <!-- ── HERO CAROUSEL ──────────────────────────────── -->
+    <section id="inicio">
+      <div id="main-carousel">
+        <div class="carousel-container">
+
+          <div class="carousel-slide active">
+            <img src="images/Cuerina Premium.png" alt="Cuerina Premium" class="carousel-bg">
+            <div class="carousel-content-wrapper">
+              <div class="carousel-content">
+                <span class="eyebrow-pill">Temporada de Descuentos</span>
+                <h2>Cuerina Premium<br>desde S/ 38.90/m</h2>
+                <p>El mejor material para tus bolsos y carteras artesanales, en docenas de colores</p>
+                <a href="#materiales" class="carousel-btn">Explorar Materiales</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="carousel-slide">
-          <img src="images/accesorios.png" alt="Nuevos Ingresos" class="carousel-bg">
-          <div class="carousel-overlay">
-            <div class="carousel-content">
-              <h2>Lo Nuevo en Cread</h2>
-              <p>Descubre las últimas tendencias en materiales</p>
-              <a href="#novedades" class="carousel-btn">Ver Novedades</a>
+
+          <div class="carousel-slide">
+            <img src="images/accesorios.png" alt="Accesorios de Costura" class="carousel-bg">
+            <div class="carousel-content-wrapper">
+              <div class="carousel-content">
+                <span class="eyebrow-pill">Novedades</span>
+                <h2>Todo lo que<br>necesitas para crear</h2>
+                <p>Agujas, cierres, hilos, tijeras y más accesorios de primera calidad</p>
+                <a href="#accesorios" class="carousel-btn">Ver Accesorios</a>
+              </div>
             </div>
           </div>
+
+          <div class="carousel-slide">
+            <img src="images/patchwork.png" alt="Clases de Costura" class="carousel-bg">
+            <div class="carousel-content-wrapper">
+              <div class="carousel-content">
+                <span class="eyebrow-pill">Aprende y Emprende</span>
+                <h2>Clases de confección<br>de bolsos</h2>
+                <p>Aprende desde cero o perfecciona tu técnica con nuestras maestras expertas</p>
+                <a href="#clases" class="carousel-btn">Ver Clases</a>
+              </div>
+            </div>
+          </div>
+
+          <button class="carousel-control prev" onclick="moveSlide(-1)" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+          <button class="carousel-control next" onclick="moveSlide(1)" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+
+          <div class="carousel-dots">
+            <button class="carousel-dot active" aria-label="Slide 1"></button>
+            <button class="carousel-dot" aria-label="Slide 2"></button>
+            <button class="carousel-dot" aria-label="Slide 3"></button>
+          </div>
         </div>
-        <button class="carousel-control prev" onclick="moveSlide(-1)"><i class="fas fa-chevron-left"></i></button>
-        <button class="carousel-control next" onclick="moveSlide(1)"><i class="fas fa-chevron-right"></i></button>
       </div>
     </section>
 
-    <section id="hero">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1>Todo para tu creatividad en un solo lugar</h1>
-          <p>Materiales, máquinas, accesorios y las mejores clases para tus proyectos de confección.</p>
-          <div class="hero-buttons">
-            <a href="materiales.html" class="cta-button">Ver Catálogo</a>
-            <a href="#clases" class="cta-button btn-outline">Ver Clases</a>
-          </div>
-        </div>
-        <div class="hero-image">
-          <img src="images/Cuerina Premium.png" alt="Cuerina Premium" class="client-image">
-        </div>
-      </div>
-    </section>
-
+    <!-- ── TRUST / FEATURES BAR ───────────────────────── -->
     <section id="features-banner">
       <div class="feature-item">
-        <i class="fas fa-truck"></i>
+        <i class="fas fa-shipping-fast"></i>
         <p>Envíos a todo el Perú</p>
       </div>
       <div class="feature-item">
-        <i class="fas fa-credit-card"></i>
-        <p>Pagos Seguros</p>
+        <i class="fas fa-mobile-alt"></i>
+        <p>Pago con Yape y Plin</p>
       </div>
       <div class="feature-item">
-        <i class="fas fa-chalkboard-teacher"></i>
-        <p>Clases Especializadas</p>
+        <i class="fas fa-award"></i>
+        <p>Materiales de Calidad</p>
+      </div>
+      <div class="feature-item">
+        <i class="fas fa-headset"></i>
+        <p>Asesoría Personalizada</p>
       </div>
     </section>
 
-    <!-- Novedades Section -->
-    <section id="novedades" class="product-section">
+    <!-- ── CATEGORY SHOWCASE ──────────────────────────── -->
+    <section id="categorias" class="reveal-on-scroll">
       <div class="section-header">
-        <h2>Novedades</h2>
-        <p>Los últimos ingresos para tus proyectos</p>
+        <span class="eyebrow">Explora nuestra tienda</span>
+        <h2>Nuestras Categorías</h2>
+        <p>Todo lo que necesitas para crear bolsos y carteras artesanales únicos</p>
       </div>
-      <div class="productos-grid">
-        <div class="producto-card">
-          <div class="producto-img">
-            <img src="images/accesorios.png" alt="Kit de Agujas">
-            <span class="badge-new">Nuevo</span>
+      <div class="category-grid container">
+        <a href="#materiales" class="category-tile">
+          <img src="images/Cuerina Premium.png" alt="Materiales Cuerina">
+          <div class="category-tile-overlay">
+            <h3>Materiales</h3>
+            <p>Cuerina premium en docenas de colores y texturas</p>
+            <span class="category-tile-arrow">Ver todo <i class="fas fa-arrow-right"></i></span>
           </div>
-          <h3>Kit de Agujas Premium</h3>
-          <p class="descripcion">Set completo de agujas para diferentes tejidos</p>
-          <p class="precio">S/ 25.00</p>
-          <button class="add-to-cart">Agregar al carrito</button>
-        </div>
-        <div class="producto-card">
-          <div class="producto-img">
-            <img src="images/Hilos.png" alt="Hilo Neón">
-            <span class="badge-new">Nuevo</span>
+        </a>
+        <a href="#accesorios" class="category-tile">
+          <img src="images/accesorios.png" alt="Accesorios de Costura">
+          <div class="category-tile-overlay">
+            <h3>Accesorios</h3>
+            <p>Agujas, cierres, hilos, tijeras y herramientas esenciales</p>
+            <span class="category-tile-arrow">Ver todo <i class="fas fa-arrow-right"></i></span>
           </div>
-          <h3>Hilo Poliéster Neón</h3>
-          <p class="descripcion">Colores vibrantes para acabados únicos</p>
-          <p class="precio">S/ 8.50</p>
-          <button class="add-to-cart">Agregar al carrito</button>
-        </div>
-        <div class="producto-card">
-          <div class="producto-img">
-            <img src="images/Cuerina Premium.png" alt="Cuerina Estampada">
-            <span class="badge-new">Nuevo</span>
+        </a>
+        <a href="#maquinas" class="category-tile">
+          <img src="images/maquinas.png" alt="Máquinas de Coser">
+          <div class="category-tile-overlay">
+            <h3>Máquinas</h3>
+            <p>Industriales y domésticas para todo nivel de producción</p>
+            <span class="category-tile-arrow">Ver todo <i class="fas fa-arrow-right"></i></span>
           </div>
-          <h3>Cuerina Estampada</h3>
-          <p class="descripcion">Nuevos diseños florales y geométricos</p>
-          <p class="precio">S/ 15.90</p>
-          <button class="add-to-cart">Agregar al carrito</button>
-        </div>
-        <div class="producto-card">
-          <div class="producto-img">
-            <img src="images/accesorios.png" alt="Tijeras de Sastre">
-            <span class="badge-new">Nuevo</span>
-          </div>
-          <h3>Tijeras Profesionales</h3>
-          <p class="descripcion">Corte preciso y ergonómico</p>
-          <p class="precio">S/ 45.00</p>
-          <button class="add-to-cart">Agregar al carrito</button>
-        </div>
+        </a>
       </div>
     </section>
 
-    <!-- Promociones Section -->
-    <section id="promociones" class="product-section bg-light">
+    <!-- ── PRODUCTOS DESTACADOS ───────────────────────── -->
+    <section id="destacados" class="product-section reveal-on-scroll">
       <div class="section-header">
-        <h2>Promociones</h2>
-        <p>¡Ofertas que no puedes dejar pasar!</p>
-      </div>
-      <div class="productos-grid">
-        <div class="producto-card promo-card">
-          <div class="producto-img">
-            <img src="images/Hilos.png" alt="Pack Hilos">
-            <span class="badge-promo">3x2</span>
-          </div>
-          <h3>Pack Hilos Básicos</h3>
-          <p class="descripcion">Lleva 3 y paga 2 en colores básicos</p>
-          <div class="price-container">
-            <span class="old-price">S/ 38.70</span>
-            <span class="precio">S/ 25.80</span>
-          </div>
-          <button class="add-to-cart">Agregar al carrito</button>
-        </div>
-        <div class="producto-card promo-card">
-          <div class="producto-img">
-            <img src="images/Cierres.png" alt="Pack Cierres">
-            <span class="badge-promo">-20%</span>
-          </div>
-          <h3>Pack 10 Cierres</h3>
-          <p class="descripcion">Surtido de cierres de 20cm</p>
-          <div class="price-container">
-            <span class="old-price">S/ 25.00</span>
-            <span class="precio">S/ 20.00</span>
-          </div>
-          <button class="add-to-cart">Agregar al carrito</button>
-        </div>
-        <div class="producto-card promo-card">
-          <div class="producto-img">
-            <img src="images/maquinas.png" alt="Combo Inicio">
-            <span class="badge-promo">Combo</span>
-          </div>
-          <h3>Kit de Inicio Costura</h3>
-          <p class="descripcion">Tijera + Cinta + Tiza + Agujas</p>
-          <div class="price-container">
-            <span class="old-price">S/ 65.00</span>
-            <span class="precio">S/ 49.90</span>
-          </div>
-          <button class="add-to-cart">Agregar al carrito</button>
-        </div>
-        <div class="producto-card promo-card">
-          <div class="producto-img">
-            <img src="images/Cuerina Premium.png" alt="Retazos Cuerina">
-            <span class="badge-promo">2x1</span>
-          </div>
-          <h3>Retazos Cuerina</h3>
-          <p class="descripcion">Pack de retazos seleccionados (1kg)</p>
-          <div class="price-container">
-            <span class="old-price">S/ 30.00</span>
-            <span class="precio">S/ 15.00</span>
-          </div>
-          <button class="add-to-cart">Agregar al carrito</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Productos Más Buscados Section -->
-    <section id="mas-buscados" class="product-section">
-      <div class="section-header">
+        <span class="eyebrow">Los favoritos de nuestra comunidad</span>
         <h2>Productos Más Buscados</h2>
-        <p>Los favoritos de nuestra comunidad</p>
+        <p>Materiales y accesorios elegidos por cientos de artesanas peruanas</p>
       </div>
       <div class="productos-grid">
+
         <div class="producto-card">
-          <div class="producto-img">
+          <div class="producto-img-wrapper">
             <img src="images/Cuerina Premium.png" alt="Cuerina Premium">
             <span class="badge-trend"><i class="fas fa-fire"></i> Hot</span>
+            <div class="card-actions">
+              <button class="card-quick-add" data-name="Cuerina Premium" data-price="10.90">Agregar al carrito</button>
+            </div>
           </div>
-          <h3>Cuerina Premium</h3>
-          <p class="descripcion">Material sintético de alta calidad</p>
-          <p class="precio">S/ 10.90</p>
-          <button class="add-to-cart">Agregar al carrito</button>
+          <div class="card-body">
+            <h3>Cuerina Premium</h3>
+            <p class="descripcion">Material sintético de alta calidad por metro</p>
+            <span class="precio">S/ 10.90</span>
+          </div>
         </div>
+
         <div class="producto-card">
-          <div class="producto-img">
+          <div class="producto-img-wrapper">
             <img src="images/Hilos.png" alt="Hilos Premium">
             <span class="badge-trend"><i class="fas fa-fire"></i> Hot</span>
+            <div class="card-actions">
+              <button class="card-quick-add">Agregar al carrito</button>
+            </div>
           </div>
-          <h3>Hilos Premium</h3>
-          <p class="descripcion">Hilos resistentes para costuras perfectas</p>
-          <p class="precio">S/ 12.90</p>
-          <button class="add-to-cart">Agregar al carrito</button>
+          <div class="card-body">
+            <h3>Hilos Premium</h3>
+            <p class="descripcion">Hilos resistentes para costuras perfectas</p>
+            <span class="precio">S/ 12.90</span>
+          </div>
         </div>
+
         <div class="producto-card">
-          <div class="producto-img">
+          <div class="producto-img-wrapper">
             <img src="images/Cierres.png" alt="Cierres Metálicos">
+            <div class="card-actions">
+              <button class="card-quick-add">Agregar al carrito</button>
+            </div>
           </div>
-          <h3>Cierres Metálicos</h3>
-          <p class="descripcion">Cierres fuertes para bolsos</p>
-          <p class="precio">S/ 8.90</p>
-          <button class="add-to-cart">Agregar al carrito</button>
+          <div class="card-body">
+            <h3>Cierres Metálicos</h3>
+            <p class="descripcion">Cierres resistentes para bolsos y carteras</p>
+            <span class="precio">S/ 8.90</span>
+          </div>
         </div>
+
         <div class="producto-card">
-          <div class="producto-img">
-            <img src="images/maquinas.png" alt="Máquina Recta">
+          <div class="producto-img-wrapper">
+            <img src="images/tijeras.png" alt="Tijeras Profesionales">
+            <span class="badge-new">Nuevo</span>
+            <div class="card-actions">
+              <button class="card-quick-add">Agregar al carrito</button>
+            </div>
           </div>
-          <h3>Aceite para Máquina</h3>
-          <p class="descripcion">Lubricante esencial para mantenimiento</p>
-          <p class="precio">S/ 15.00</p>
-          <button class="add-to-cart">Agregar al carrito</button>
+          <div class="card-body">
+            <h3>Tijeras Profesionales</h3>
+            <p class="descripcion">Corte preciso y ergonómico para cuero y telas</p>
+            <span class="precio">S/ 45.00</span>
+          </div>
+        </div>
+
+        <div class="producto-card">
+          <div class="producto-img-wrapper">
+            <img src="images/agujas.png" alt="Kit de Agujas Premium">
+            <span class="badge-new">Nuevo</span>
+            <div class="card-actions">
+              <button class="card-quick-add">Agregar al carrito</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>Kit de Agujas Premium</h3>
+            <p class="descripcion">Set completo para diferentes tipos de tela y cuero</p>
+            <span class="precio">S/ 25.00</span>
+          </div>
+        </div>
+
+        <div class="producto-card">
+          <div class="producto-img-wrapper">
+            <img src="images/cuerinarojovino.png" alt="Cuerina Rojo Vino">
+            <span class="badge-new">Nuevo</span>
+            <div class="card-actions">
+              <button class="card-quick-add">Agregar al carrito</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>Cuerina Rojo Vino</h3>
+            <p class="descripcion">Color tendencia temporada — textura lisa premium</p>
+            <span class="precio">S/ 42.90</span>
+          </div>
+        </div>
+
+        <div class="producto-card">
+          <div class="producto-img-wrapper">
+            <img src="images/carretes.png" alt="Carretes y Bobinas">
+            <span class="badge-new">Nuevo</span>
+            <div class="card-actions">
+              <button class="card-quick-add">Agregar al carrito</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>Carretes y Bobinas</h3>
+            <p class="descripcion">Compatibles con máquinas industriales y domésticas</p>
+            <span class="precio">Desde S/ 15.90</span>
+          </div>
+        </div>
+
+        <div class="producto-card">
+          <div class="producto-img-wrapper">
+            <img src="images/cuentas.png" alt="Cuentas Decorativas">
+            <div class="card-actions">
+              <button class="card-quick-add">Agregar al carrito</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>Cuentas Decorativas</h3>
+            <p class="descripcion">Adornos y apliques para personalizar tus bolsos</p>
+            <span class="precio">S/ 18.50</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── CATÁLOGO MATERIALES ─────────────────────────── -->
+    <section id="materiales" class="product-section reveal-on-scroll">
+      <div class="catalog-section-header">
+        <div class="section-header" style="text-align:left; margin-bottom:0">
+          <span class="eyebrow" style="text-align:left; display:block">Cuerina · Hilos · Telas</span>
+          <h2>Materiales Premium</h2>
+          <p>Cuerina sintética de alta calidad en docenas de colores, hilos resistentes y más</p>
+        </div>
+        <div class="catalog-sort">
+          <label for="sort-materiales"><i class="fas fa-sort"></i> Ordenar:</label>
+          <select class="sort-select" id="sort-materiales">
+            <option value="default">Destacados</option>
+            <option value="price-asc">Precio: menor a mayor</option>
+            <option value="price-desc">Precio: mayor a menor</option>
+            <option value="name">Nombre A–Z</option>
+          </select>
+        </div>
+      </div>
+      <div class="productos-grid" style="margin-top:2rem">
+
+        <div class="producto-card">
+          <div class="producto-img-wrapper">
+            <img src="images/Cuerina Premium.png" alt="Cuerina Premium">
+            <span class="badge-trend"><i class="fas fa-fire"></i> Hot</span>
+            <div class="card-actions">
+              <button class="card-quick-add">Agregar al carrito</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>Cuerina Premium</h3>
+            <p class="descripcion">Material sintético de alta calidad, suave y resistente, por metro</p>
+            <span class="precio">S/ 10.90</span>
+          </div>
+        </div>
+
+        <div class="producto-card">
+          <div class="producto-img-wrapper">
+            <img src="images/cuerinanegra.png" alt="Cuerina Negra">
+            <div class="card-actions">
+              <button class="card-quick-add">Agregar al carrito</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>Cuerina Negra Clásica</h3>
+            <p class="descripcion">Acabado mate premium, ideal para bolsos formales y casuales</p>
+            <span class="precio">S/ 38.90</span>
+          </div>
+        </div>
+
+        <div class="producto-card">
+          <div class="producto-img-wrapper">
+            <img src="images/cuerinarojovino.png" alt="Cuerina Rojo Vino">
+            <span class="badge-new">Nuevo</span>
+            <div class="card-actions">
+              <button class="card-quick-add">Agregar al carrito</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>Cuerina Rojo Vino</h3>
+            <p class="descripcion">Color tendencia temporada — textura lisa premium por metro</p>
+            <span class="precio">S/ 42.90</span>
+          </div>
+        </div>
+
+        <div class="producto-card">
+          <div class="producto-img-wrapper">
+            <img src="images/cuerinapremiumvarios.png" alt="Cuerina Premium Varios Colores">
+            <span class="badge-promo">Variedad</span>
+            <div class="card-actions">
+              <button class="card-quick-add">Agregar al carrito</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>Cuerina Premium — Pack Colores</h3>
+            <p class="descripcion">Muestras de 4 colores de tu elección para proyectos creativos</p>
+            <span class="precio">S/ 35.00</span>
+          </div>
+        </div>
+
+        <div class="producto-card">
+          <div class="producto-img-wrapper">
+            <img src="images/cuerinavarias.png" alt="Cuerina Varias Texturas">
+            <div class="card-actions">
+              <button class="card-quick-add">Agregar al carrito</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>Cuerina Texturada</h3>
+            <p class="descripcion">Acabados granulados y repujados para bolsos de alta gama</p>
+            <span class="precio">S/ 44.90</span>
+          </div>
+        </div>
+
+        <div class="producto-card">
+          <div class="producto-img-wrapper">
+            <img src="images/Hilos.png" alt="Hilos Premium">
+            <span class="badge-trend"><i class="fas fa-fire"></i> Hot</span>
+            <div class="card-actions">
+              <button class="card-quick-add">Agregar al carrito</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>Hilos de Costura Premium</h3>
+            <p class="descripcion">Hilos resistentes de poliéster en amplia gama de colores</p>
+            <span class="precio">S/ 12.90</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── CATÁLOGO ACCESORIOS ─────────────────────────── -->
+    <section id="accesorios" class="product-section reveal-on-scroll" style="background:var(--clr-bg)">
+      <div class="catalog-section-header">
+        <div class="section-header" style="text-align:left; margin-bottom:0">
+          <span class="eyebrow" style="text-align:left; display:block">Agujas · Cierres · Herramientas</span>
+          <h2>Accesorios de Costura</h2>
+          <p>Todo lo que necesitas para acabados perfectos y profesionales en tus creaciones</p>
+        </div>
+        <div class="catalog-sort">
+          <label for="sort-accesorios"><i class="fas fa-sort"></i> Ordenar:</label>
+          <select class="sort-select" id="sort-accesorios">
+            <option value="default">Destacados</option>
+            <option value="price-asc">Precio: menor a mayor</option>
+            <option value="price-desc">Precio: mayor a menor</option>
+            <option value="name">Nombre A–Z</option>
+          </select>
+        </div>
+      </div>
+      <div class="productos-grid" style="margin-top:2rem">
+
+        <div class="producto-card">
+          <div class="producto-img-wrapper">
+            <img src="images/agujas.png" alt="Kit de Agujas Premium">
+            <span class="badge-new">Nuevo</span>
+            <div class="card-actions">
+              <button class="card-quick-add">Agregar al carrito</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>Kit de Agujas Premium</h3>
+            <p class="descripcion">Set completo de agujas para cuero, tela y sintéticos</p>
+            <span class="precio">S/ 25.00</span>
+          </div>
+        </div>
+
+        <div class="producto-card">
+          <div class="producto-img-wrapper">
+            <img src="images/tijeras.png" alt="Tijeras Profesionales">
+            <span class="badge-trend"><i class="fas fa-fire"></i> Hot</span>
+            <div class="card-actions">
+              <button class="card-quick-add">Agregar al carrito</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>Tijeras Profesionales</h3>
+            <p class="descripcion">Hoja de acero inoxidable, corte preciso y ergonómico</p>
+            <span class="precio">S/ 45.00</span>
+          </div>
+        </div>
+
+        <div class="producto-card">
+          <div class="producto-img-wrapper">
+            <img src="images/cintametrica.png" alt="Cinta Métrica Profesional">
+            <div class="card-actions">
+              <button class="card-quick-add">Agregar al carrito</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>Cinta Métrica Profesional</h3>
+            <p class="descripcion">150 cm / 60 pulgadas, flexible y resistente</p>
+            <span class="precio">S/ 8.50</span>
+          </div>
+        </div>
+
+        <div class="producto-card">
+          <div class="producto-img-wrapper">
+            <img src="images/Cierres.png" alt="Cierres Metálicos">
+            <span class="badge-promo">3×2</span>
+            <div class="card-actions">
+              <button class="card-quick-add">Agregar al carrito</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>Cierres Metálicos</h3>
+            <p class="descripcion">Cierres de alta resistencia para bolsos y carteras, pack x5</p>
+            <span class="precio">S/ 8.90</span>
+          </div>
+        </div>
+
+        <div class="producto-card">
+          <div class="producto-img-wrapper">
+            <img src="images/carretes.png" alt="Carretes y Bobinas">
+            <span class="badge-new">Nuevo</span>
+            <div class="card-actions">
+              <button class="card-quick-add">Agregar al carrito</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>Carretes y Bobinas</h3>
+            <p class="descripcion">Compatibles con máquinas industriales y domésticas</p>
+            <span class="precio">Desde S/ 15.90</span>
+          </div>
+        </div>
+
+        <div class="producto-card">
+          <div class="producto-img-wrapper">
+            <img src="images/troqueladora.png" alt="Troqueladora de Mano">
+            <div class="card-actions">
+              <button class="card-quick-add">Agregar al carrito</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>Troqueladora de Mano</h3>
+            <p class="descripcion">Perforadora profesional para cuero y cuerina, incluye brocas</p>
+            <span class="precio">S/ 38.00</span>
+          </div>
+        </div>
+
+        <div class="producto-card">
+          <div class="producto-img-wrapper">
+            <img src="images/accesoriosvarios.png" alt="Set de Accesorios Varios">
+            <div class="card-actions">
+              <button class="card-quick-add">Agregar al carrito</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>Set de Accesorios Varios</h3>
+            <p class="descripcion">Hebillas, argollas, remaches y más — pack iniciante</p>
+            <span class="precio">S/ 22.00</span>
+          </div>
+        </div>
+
+        <div class="producto-card">
+          <div class="producto-img-wrapper">
+            <img src="images/patchwork.png" alt="Tabla para Corte">
+            <div class="card-actions">
+              <button class="card-quick-add">Agregar al carrito</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>Tabla de Corte A3</h3>
+            <p class="descripcion">Auto-regenerante, con guía de medidas en cm y pulgadas</p>
+            <span class="precio">S/ 55.00</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── CATÁLOGO MÁQUINAS ───────────────────────────── -->
+    <section id="maquinas" class="product-section reveal-on-scroll">
+      <div class="catalog-section-header">
+        <div class="section-header" style="text-align:left; margin-bottom:0">
+          <span class="eyebrow" style="text-align:left; display:block">Industriales · Domésticas</span>
+          <h2>Máquinas Profesionales</h2>
+          <p>Equipamiento de alta producción. Consulta por WhatsApp para asesoría y financiamiento</p>
+        </div>
+        <div class="catalog-sort">
+          <label for="sort-maquinas"><i class="fas fa-sort"></i> Ordenar:</label>
+          <select class="sort-select" id="sort-maquinas">
+            <option value="default">Destacados</option>
+            <option value="price-asc">Precio: menor a mayor</option>
+            <option value="price-desc">Precio: mayor a menor</option>
+            <option value="name">Nombre A–Z</option>
+          </select>
+        </div>
+      </div>
+      <div class="productos-grid" style="margin-top:2rem">
+
+        <div class="producto-card">
+          <div class="producto-img-wrapper">
+            <img src="images/maquinas.png" alt="Máquina Recta Industrial">
+            <span class="badge-trend"><i class="fas fa-fire"></i> Hot</span>
+            <div class="card-actions">
+              <button class="card-quick-add">Agregar al carrito</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>Máquina Recta Industrial</h3>
+            <p class="descripcion">Motor servo, 5,500 rpm, ideal para producción continua de bolsos</p>
+            <span class="precio">S/ 2,850.00</span>
+          </div>
+        </div>
+
+        <div class="producto-card">
+          <div class="producto-img-wrapper">
+            <img src="images/maquinas.png" alt="Máquina Doméstica Multifunción">
+            <div class="card-actions">
+              <button class="card-quick-add">Agregar al carrito</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>Máquina Doméstica Multifunción</h3>
+            <p class="descripcion">32 puntadas, costura decorativa, incluye kit de pies prensatelas</p>
+            <span class="precio">S/ 890.00</span>
+          </div>
+        </div>
+
+        <div class="producto-card">
+          <div class="producto-img-wrapper">
+            <img src="images/maquinas.png" alt="Máquina de Coser para Cuero">
+            <span class="badge-new">Nuevo</span>
+            <div class="card-actions">
+              <a href="https://wa.me/51985605911?text=Hola!%20Quiero%20consultar%20sobre%20la%20Máquina%20para%20Cuero" target="_blank" rel="noopener" class="card-quick-add" style="text-align:center; text-decoration:none">
+                <i class="fab fa-whatsapp"></i> Consultar
+              </a>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>Máquina para Cuero y Sintético</h3>
+            <p class="descripcion">Aguja triple resistente, pata triple arrastre — costura perfecta en materiales gruesos</p>
+            <span class="precio">S/ 1,650.00</span>
+          </div>
+        </div>
+
+        <div class="producto-card">
+          <div class="producto-img-wrapper">
+            <img src="images/maquinas.png" alt="Máquina Overlock">
+            <div class="card-actions">
+              <a href="https://wa.me/51985605911?text=Hola!%20Quiero%20consultar%20sobre%20la%20Máquina%20Overlock" target="_blank" rel="noopener" class="card-quick-add" style="text-align:center; text-decoration:none">
+                <i class="fab fa-whatsapp"></i> Consultar
+              </a>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3>Máquina Overlock Industrial</h3>
+            <p class="descripcion">Remate profesional de costuras, 5 hilos, alta velocidad</p>
+            <span class="precio">S/ 3,200.00</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── PROMO BANNER ────────────────────────────────── -->
+    <section class="promo-banner reveal-on-scroll">
+      <div class="promo-banner-inner">
+        <div class="promo-banner-text">
+          <span class="promo-eyebrow">Oferta de la semana</span>
+          <h2>Pack Cierres<br>3×2 en seleccionados</h2>
+          <p>Lleva 3 packs de cierres metálicos y paga solo 2. Oferta válida hasta agotar stock.</p>
+          <a href="#accesorios" class="promo-banner-cta">Ver Promoción</a>
+        </div>
+        <div class="promo-banner-image">
+          <img src="images/Cierres.png" alt="Pack Cierres Metálicos">
         </div>
       </div>
     </section>
 
-    <!-- Venta de Liquidación Section -->
-    <section id="liquidacion" class="product-section bg-light">
+    <!-- ── KITS / PAQUETES ────────────────────────────── -->
+    <section id="kits" class="reveal-on-scroll">
       <div class="section-header">
-        <h2>Venta de Liquidación</h2>
-        <p>Últimas unidades a precios increíbles</p>
+        <span class="eyebrow">La forma más fácil de empezar</span>
+        <h2>Kits para Crear tu Bolso</h2>
+        <p>Todo lo que necesitas en un solo paquete, a precio especial</p>
       </div>
-      <div class="productos-grid">
-        <div class="producto-card">
-          <div class="producto-img">
-            <img src="images/accesorios.png" alt="Botones Vintage">
-            <span class="badge-sale">Liquidación</span>
+      <div class="kits-grid container">
+
+        <div class="kit-card">
+          <div class="kit-card-img">
+            <img src="images/cuerinanegra.png" alt="Kit Bolso Básico">
+            <span class="kit-tag">Kit Completo</span>
           </div>
-          <h3>Botones Vintage</h3>
-          <p class="descripcion">Modelos discontinuados</p>
-          <div class="price-container">
-            <span class="old-price">S/ 15.00</span>
-            <span class="precio-liquid">S/ 5.00</span>
+          <div class="kit-card-body">
+            <h3>Kit Bolso Básico</h3>
+            <ul class="kit-includes">
+              <li>1 m Cuerina Premium a tu elección</li>
+              <li>Pack Cierres metálicos (5 unid.)</li>
+              <li>Hilos de costura (2 carretes)</li>
+              <li>Kit de Agujas (1 paquete)</li>
+            </ul>
+            <div class="kit-pricing">
+              <span class="kit-savings">Ahorras S/ 18.00</span>
+              <div class="price-container">
+                <span class="old-price">S/ 95.60</span>
+                <span class="precio">S/ 77.90</span>
+              </div>
+            </div>
+            <button class="kit-cta add-to-cart">Agregar Kit al Carrito</button>
           </div>
-          <button class="add-to-cart">Agregar al carrito</button>
         </div>
-        <div class="producto-card">
-          <div class="producto-img">
-            <img src="images/Hilos.png" alt="Lana Fantasía">
-            <span class="badge-sale">Liquidación</span>
+
+        <div class="kit-card">
+          <div class="kit-card-img">
+            <img src="images/cuerinavarias.png" alt="Kit Bolso Intermedio">
+            <span class="kit-tag">Más Vendido</span>
           </div>
-          <h3>Lana Fantasía</h3>
-          <p class="descripcion">Últimos ovillos disponibles</p>
-          <div class="price-container">
-            <span class="old-price">S/ 18.00</span>
-            <span class="precio-liquid">S/ 9.90</span>
+          <div class="kit-card-body">
+            <h3>Kit Bolso Intermedio</h3>
+            <ul class="kit-includes">
+              <li>2 m Cuerina Premium (2 colores)</li>
+              <li>Pack Cierres y hebillas (10 unid.)</li>
+              <li>Hilos de colores (4 carretes)</li>
+              <li>Cinta métrica profesional</li>
+              <li>Troqueladora de mano</li>
+            </ul>
+            <div class="kit-pricing">
+              <span class="kit-savings">Ahorras S/ 32.00</span>
+              <div class="price-container">
+                <span class="old-price">S/ 178.00</span>
+                <span class="precio">S/ 146.00</span>
+              </div>
+            </div>
+            <button class="kit-cta add-to-cart">Agregar Kit al Carrito</button>
           </div>
-          <button class="add-to-cart">Agregar al carrito</button>
         </div>
-        <div class="producto-card">
-          <div class="producto-img">
-            <img src="images/Cuerina Premium.png" alt="Retazos Varios">
-            <span class="badge-sale">Liquidación</span>
-          </div>
-          <h3>Saldos de Telas</h3>
-          <p class="descripcion">Piezas finales de rollo</p>
-          <div class="price-container">
-            <span class="old-price">S/ 25.00</span>
-            <span class="precio-liquid">S/ 12.00</span>
-          </div>
-          <button class="add-to-cart">Agregar al carrito</button>
-        </div>
-        <div class="producto-card">
-          <div class="producto-img">
-            <img src="images/maquinas.png" alt="Repuestos Antiguos">
-            <span class="badge-sale">Liquidación</span>
-          </div>
-          <h3>Repuestos Varios</h3>
-          <p class="descripcion">Para modelos antiguos</p>
-          <div class="price-container">
-            <span class="old-price">S/ 10.00</span>
-            <span class="precio-liquid">S/ 2.00</span>
-          </div>
-          <button class="add-to-cart">Agregar al carrito</button>
-        </div>
+
       </div>
     </section>
 
-    <section id="categorias">
-      <h2>Nuestras Categorías</h2>
-      <div class="categorias-container">
-        <a href="materiales.html" class="categoria">
-          <div class="categoria-img">
-            <img src="images/Cuerina Premium.png" alt="Materiales">
-          </div>
-          <h3>Materiales</h3>
-          <p>Descubre nuestra selección de materiales de alta calidad</p>
-        </a>
-        <a href="accesorios.html" class="categoria">
-          <div class="categoria-img">
-            <img src="images/accesorios.png" alt="Accesorios">
-          </div>
-          <h3>Accesorios</h3>
-          <p>Explora nuestra colección de accesorios</p>
-        </a>
-        <a href="maquinas.html" class="categoria">
-          <div class="categoria-img">
-            <img src="images/maquinas.png" alt="Máquinas">
-          </div>
-          <h3>Máquinas</h3>
-          <p>Encuentra las mejores máquinas para tu trabajo</p>
-        </a>
-      </div>
-    </section>
-
-    <section id="clases">
+    <!-- ── CLASES ─────────────────────────────────────── -->
+    <section id="clases" class="reveal-on-scroll">
       <div class="section-header">
-        <h2>Aprende y Emprende</h2>
-        <p>Domina el arte de la confección con nuestras clases</p>
+        <span class="eyebrow">Aprende con Expertas</span>
+        <h2>Clases de Confección</h2>
+        <p>Domina el arte de crear bolsos y carteras artesanales desde cero</p>
       </div>
-      <div class="clases-container">
+      <div class="clases-container container">
+
         <div class="clase-card">
           <div class="clase-img">
-            <!-- Placeholder or generic image -->
-            <img src="images/patchwork.png" alt="Clases Virtuales">
+            <img src="images/patchwork.png" alt="Clases Virtuales de Bolsos">
             <span class="badge virtual">Virtual</span>
           </div>
           <div class="clase-content">
             <h3>Clases Virtuales</h3>
-            <p>Aprende desde la comodidad de tu casa. Acceso a videos paso a paso y asesoría personalizada.</p>
-            <a href="https://wa.me/51985605911?text=Hola,%20deseo%20información%20sobre%20las%20clases%20virtuales"
-              class="btn-clase" target="_blank">Más Información</a>
+            <p>Aprende desde la comodidad de tu casa. Acceso a videos paso a paso, materiales descargables y asesoría personalizada por WhatsApp.</p>
+            <a href="https://wa.me/51985605911?text=Hola,%20deseo%20información%20sobre%20las%20clases%20virtuales%20de%20bolsos" class="btn-clase" target="_blank" rel="noopener">Más Información</a>
           </div>
         </div>
+
         <div class="clase-card">
           <div class="clase-img">
             <img src="images/maquinas.png" alt="Talleres Presenciales">
@@ -373,19 +723,207 @@
           </div>
           <div class="clase-content">
             <h3>Talleres Presenciales</h3>
-            <p>Experiencia práctica con nuestras máquinas y materiales. Guía experta incluida.</p>
-            <a href="https://wa.me/51985605911?text=Hola,%20deseo%20información%20sobre%20los%20talleres%20presenciales"
-              class="btn-clase" target="_blank">Más Información</a>
+            <p>Experiencia práctica con nuestras máquinas y materiales en Lima. Grupos reducidos para una atención personalizada y aprendizaje efectivo.</p>
+            <a href="https://wa.me/51985605911?text=Hola,%20deseo%20información%20sobre%20los%20talleres%20presenciales%20de%20bolsos" class="btn-clase" target="_blank" rel="noopener">Más Información</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── SOBRE NOSOTROS ─────────────────────────────── -->
+    <section id="nosotros" class="reveal-on-scroll">
+      <div class="nosotros-grid container">
+        <div class="nosotros-text">
+          <span class="eyebrow">Nuestra Historia</span>
+          <h2>Somos Cread Peru</h2>
+          <p>Nacimos con la misión de democratizar el acceso a materiales de confección de calidad en el Perú. Creemos que la artesanía tiene el poder de transformar vidas y contribuir a la economía familiar.</p>
+          <p>Desde Lima, llegamos a todo el Perú con materiales premium, máquinas de coser y clases diseñadas para que cualquier persona — sin importar su experiencia — pueda crear bolsos y carteras artesanales únicos.</p>
+          <p>Más de <strong>500 artesanas</strong> ya han transformado su pasión en un emprendimiento con nuestro apoyo.</p>
+        </div>
+        <div class="valores-grid">
+          <div class="valor-card">
+            <i class="fas fa-medal"></i>
+            <h4>Calidad Premium</h4>
+            <p>Solo los mejores materiales para tus creaciones</p>
+          </div>
+          <div class="valor-card">
+            <i class="fas fa-heart"></i>
+            <h4>Pasión Artesanal</h4>
+            <p>Amamos el arte de crear con las manos</p>
+          </div>
+          <div class="valor-card">
+            <i class="fas fa-users"></i>
+            <h4>Comunidad</h4>
+            <p>+500 artesanas confían en nosotros</p>
+          </div>
+          <div class="valor-card">
+            <i class="fas fa-shipping-fast"></i>
+            <h4>Envío Nacional</h4>
+            <p>Llegamos a todo el Perú</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contacto">
+    <!-- ── TESTIMONIALES ──────────────────────────────── -->
+    <section id="testimonios" class="reveal-on-scroll">
+      <div class="section-header">
+        <span class="eyebrow">+500 artesanas confían en Cread</span>
+        <h2>Lo que dicen nuestras clientas</h2>
+        <p>Historias reales de personas que transformaron su pasión en un negocio</p>
+      </div>
+      <div class="testimonials-grid container">
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"La cuerina que compré es increíble. Hice mi primera cartera y quedó perfecta. La calidad es notablemente superior a lo que encontraba en el mercado."</p>
+          <div class="testimonial-author">
+            <span class="author-name">María G.</span>
+            <span class="author-location">Lima, Perú</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Tomé la clase virtual y en dos semanas ya estaba vendiendo mis propios bolsos. El kit de inicio fue una excelente inversión para empezar mi emprendimiento."</p>
+          <div class="testimonial-author">
+            <span class="author-name">Rosa P.</span>
+            <span class="author-location">San Martín de Porres, Lima</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+          </div>
+          <p class="testimonial-text">"El envío llegó rápido y los materiales estaban perfectamente empacados. Los cierres metálicos son de primera calidad. Ya hice mi tercer pedido este mes."</p>
+          <div class="testimonial-author">
+            <span class="author-name">Carmen T.</span>
+            <span class="author-location">Arequipa, Perú</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── FAQ ────────────────────────────────────────── -->
+    <section id="faq" class="reveal-on-scroll">
+      <div class="section-header">
+        <span class="eyebrow">Resolvemos tus dudas</span>
+        <h2>Preguntas Frecuentes</h2>
+        <p>¿Tienes preguntas? Aquí encontrarás las respuestas más comunes</p>
+      </div>
+      <div class="faq-list container">
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Cómo realizo un pedido?
+            <i class="fas fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            Agrega los productos a tu carrito y haz clic en "Finalizar Pedido". Serás redirigido a WhatsApp con el resumen de tu pedido. Coordinaremos contigo el pago y el envío.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Cuáles son los métodos de pago?
+            <i class="fas fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            Aceptamos Yape, Plin, transferencia bancaria (BCP, Interbank, BBVA, Scotiabank) y depósito bancario. El pedido se confirma una vez recibido el pago.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Hacen envíos a provincias?
+            <i class="fas fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            ¡Sí! Enviamos a todo el Perú. El tiempo de entrega es de 1–2 días hábiles en Lima Metropolitana y 3–5 días hábiles en provincias. Envío gratuito en compras mayores a S/ 150 dentro de Lima.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Puedo hacer cambios o devoluciones?
+            <i class="fas fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            Aceptamos cambios y devoluciones dentro de los 7 días calendar de recibido el pedido, siempre que el producto esté en su estado original y con su empaque intacto. Contáctanos por WhatsApp para iniciar el proceso.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Las clases son para principiantes?
+            <i class="fas fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            ¡Absolutamente! Nuestras clases están diseñadas para todos los niveles — desde quienes nunca han cosido hasta quienes quieren perfeccionar su técnica. Tenemos modalidades virtual y presencial.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿La cuerina viene por metro o por rollo?
+            <i class="fas fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            Vendemos cuerina por metro (precio unitario) y también en rollos completos con descuento especial para quienes producen en mayor cantidad. Consulta por WhatsApp para cotizaciones de rollo.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Tienen stock de todos los colores mostrados?
+            <i class="fas fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            Mantenemos stock permanente de los colores más demandados. Para colores específicos o grandes cantidades, escríbenos por WhatsApp y verificamos disponibilidad inmediatamente.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            ¿Ofrecen asesoría para elegir materiales?
+            <i class="fas fa-plus faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            Sí, contamos con asesoría personalizada sin costo adicional. Nuestro equipo te ayuda a elegir los materiales más adecuados para tu proyecto específico. Escríbenos por WhatsApp o completa el formulario de contacto.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── NEWSLETTER ─────────────────────────────────── -->
+    <section class="newsletter-section reveal-on-scroll">
+      <div class="newsletter-inner">
+        <h2>Recibe Ofertas Exclusivas</h2>
+        <p>Suscríbete y obtén <strong>10% de descuento</strong> en tu primera compra</p>
+        <form class="newsletter-form" novalidate>
+          <input type="email" placeholder="Tu correo electrónico" required>
+          <button type="submit" class="newsletter-btn">Suscribirme</button>
+        </form>
+        <p class="newsletter-incentive">
+          <i class="fas fa-lock"></i> Sin spam. Solo novedades, tutoriales y ofertas especiales.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── CONTACTO ────────────────────────────────────── -->
+    <section id="contacto" class="reveal-on-scroll">
       <div class="contacto-container">
         <div class="contacto-info">
           <h2>Contáctanos</h2>
-          <p>Estamos aquí para ayudarte en tus proyectos.</p>
+          <p>Estamos aquí para ayudarte en cada paso de tus proyectos creativos.</p>
           <div class="contact-details">
             <div class="contact-item">
               <i class="fas fa-envelope"></i>
@@ -393,29 +931,36 @@
             </div>
             <div class="contact-item">
               <i class="fas fa-phone"></i>
-              <p>(+51) 985605911</p>
+              <p><a href="tel:+51985605911">(+51) 985 605 911</a></p>
             </div>
             <div class="contact-item">
               <i class="fas fa-map-marker-alt"></i>
               <p>Lima, Perú</p>
             </div>
+            <div class="contact-item">
+              <i class="fas fa-clock"></i>
+              <p>Lun–Vie: 9am – 6pm &nbsp;|&nbsp; Sáb: 9am – 1pm</p>
+            </div>
+          </div>
+          <div class="contact-payment-row">
+            <span>Aceptamos:</span>
+            <img src="images/Yape.jpg" alt="Yape" class="payment-badge-img">
+            <img src="images/plin.jpg" alt="Plin" class="payment-badge-img">
           </div>
           <div class="social-links-contact">
-            <a href="https://www.facebook.com/share/1CcZ13brkQ/" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.instagram.com/cread_peru?igsh=dmp5cnEwY25xdXN5" target="_blank"><i
-                class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@creadperu?_r=1&_t=ZS-921uZpGKDs0" target="_blank"><i
-                class="fab fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/share/1CcZ13brkQ/" target="_blank" rel="noopener" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/cread_peru?igsh=dmp5cnEwY25xdXN5" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@creadperu?_r=1&_t=ZS-921uZpGKDs0" target="_blank" rel="noopener" title="TikTok"><i class="fab fa-tiktok"></i></a>
           </div>
         </div>
         <div class="contacto-form-wrapper">
           <form class="contacto-form" action="mailto:pedidos@creadperu.com" method="post" enctype="text/plain">
-            <h3>Envíanos un mensaje</h3>
+            <h3>Envíanos un Mensaje</h3>
             <div class="form-group">
               <input type="text" name="nombre" placeholder="Tu Nombre" required>
             </div>
             <div class="form-group">
-              <input type="email" name="email" placeholder="Tu Email" required>
+              <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
             </div>
             <div class="form-group">
               <textarea name="mensaje" placeholder="¿En qué podemos ayudarte?" required></textarea>
@@ -425,30 +970,31 @@
         </div>
       </div>
     </section>
+
   </main>
 
+  <!-- ── FOOTER ─────────────────────────────────────────── -->
   <footer>
     <div class="footer-content">
       <div class="footer-logo-section">
-        <img src="images/c_logo_rounded.png" alt="Cread Logo Rounded" class="footer-logo">
-        <p class="footer-tagline">Tu aliado en costura y confección artesanal</p>
+        <img src="images/c_logo_rounded.png" alt="Cread Logo" class="footer-logo">
+        <p class="footer-tagline">Tu aliada en costura y confección artesanal de bolsos y carteras desde Lima, Perú</p>
         <div class="social-links">
-          <a href="https://www.facebook.com/share/1CcZ13brkQ/" target="_blank">
-            <i class="fab fa-facebook"></i>
-          </a>
-          <a href="https://www.instagram.com/cread_peru?igsh=dmp5cnEwY25xdXN5" target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.tiktok.com/@creadperu?_r=1&_t=ZS-921uZpGKDs0" target="_blank">
-            <i class="fab fa-tiktok"></i>
-          </a>
+          <a href="https://www.facebook.com/share/1CcZ13brkQ/" target="_blank" rel="noopener" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/cread_peru?igsh=dmp5cnEwY25xdXN5" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@creadperu?_r=1&_t=ZS-921uZpGKDs0" target="_blank" rel="noopener" title="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <div class="footer-payment-row">
+          <span>Pagos:</span>
+          <img src="images/Yape.jpg" alt="Yape" class="footer-payment-img">
+          <img src="images/plin.jpg" alt="Plin" class="footer-payment-img">
         </div>
       </div>
 
       <div class="footer-section">
         <h4>Institucional</h4>
         <ul class="footer-links">
-          <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+          <li><a href="#nosotros">Sobre Nosotros</a></li>
           <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
           <li><a href="terminos-condiciones.html">Términos y Condiciones</a></li>
         </ul>
@@ -457,32 +1003,33 @@
       <div class="footer-section">
         <h4>Ayuda</h4>
         <ul class="footer-links">
-          <li><a href="como-comprar.html">Cómo Comprar</a></li>
-          <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+          <li><a href="#contacto">Cómo Comprar</a></li>
+          <li><a href="#faq">Preguntas Frecuentes</a></li>
           <li><a href="#contacto">Contáctanos</a></li>
         </ul>
       </div>
 
       <div class="footer-section">
-        <h4>Enlaces Rápidos</h4>
+        <h4>Tienda</h4>
         <ul class="footer-links">
-          <li><a href="materiales.html">Materiales</a></li>
-          <li><a href="maquinas.html">Máquinas</a></li>
+          <li><a href="#materiales">Materiales</a></li>
+          <li><a href="#accesorios">Accesorios</a></li>
+          <li><a href="#maquinas">Máquinas</a></li>
           <li><a href="#clases">Clases</a></li>
+          <li><a href="cart.html">Mi Carrito</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 Creadperu. Todos los derechos reservados.</p>
+      <p>&copy; 2025 Cread Peru. Todos los derechos reservados. Hecho con <i class="fas fa-heart" style="color:var(--clr-secondary)"></i> en Lima, Perú.</p>
     </div>
   </footer>
 
-  <a href="https://wa.me/51985605911" class="whatsapp-float" target="_blank">
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/51985605911?text=Hola!%20Quisiera%20hacer%20un%20pedido%20o%20consultar%20sobre%20sus%20productos." class="whatsapp-float" target="_blank" rel="noopener" title="Chatea con nosotros por WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
   <script src="js/script.js"></script>
 </body>
-
 </html>

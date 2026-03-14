@@ -1,116 +1,141 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preguntas Frecuentes - Cread</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&family=Outfit:wght@300;400;600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preguntas Frecuentes | Cread Peru</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Cormorant+Garamond:ital,wght@1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
-    <header>
-        <nav>
-            <a href="index.html" class="logo">
-                <img src="images/Logo-cread.webp" alt="Cread Logo">
-                <div class="logo-text">
-                    <h1>Cread</h1>
-                    <span class="tagline">Crea sin límites</span>
-                </div>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="materiales.html">Materiales</a></li>
-                <li><a href="accesorios.html">Accesorios</a></li>
-                <li><a href="maquinas.html">Máquinas</a></li>
-                <li><a href="index.html#clases">Clases</a></li>
-                <li><a href="index.html#contacto">Contacto</a></li>
-            </ul>
-            <div class="cart-icon">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="cart-count">0</span>
-            </div>
-        </nav>
-    </header>
 
-    <main>
-        <section class="section-header" style="margin-top: 150px;">
-            <h2>Preguntas Frecuentes</h2>
-        </section>
-        <section style="padding: 2rem 5%; max-width: 800px; margin: 0 auto;">
-            <h3>¿Hacen envíos a todo el Perú?</h3>
-            <p>Sí, realizamos envíos a nivel nacional a través de agencias de transporte confiables.</p>
+  <div class="announcement-bar" id="announcement-bar">
+    <p><i class="fas fa-tag" style="margin-right:0.4rem"></i> Envío GRATIS a Lima en compras mayores a S/ 150 &nbsp;|&nbsp; Paga con <strong>Yape</strong> y <strong>Plin</strong></p>
+    <button class="close-btn" id="close-announcement" aria-label="Cerrar anuncio"><i class="fas fa-times"></i></button>
+  </div>
 
-            <h3>¿Cuáles son los métodos de pago?</h3>
-            <p>Aceptamos pagos vía Yape, Plin y transferencias bancarias a nuestras cuentas oficiales.</p>
-
-            <h3>¿Tienen tienda física?</h3>
-            <p>Actualmente operamos principalmente de manera virtual, pero realizamos talleres presenciales en fechas
-                programadas.</p>
-
-            <h3>¿Cómo me inscribo a las clases?</h3>
-            <p>Puedes solicitar información e inscribirte contactándonos directamente a nuestro WhatsApp.</p>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo-section">
-                <img src="images/c_logo_rounded.png" alt="Cread Logo Rounded" class="footer-logo">
-                <p class="footer-tagline">Tu aliado en costura y confección artesanal</p>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/share/1CcZ13brkQ/" target="_blank">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                    <a href="https://www.instagram.com/cread_peru?igsh=dmp5cnEwY25xdXN5" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@creadperu?_r=1&_t=ZS-921uZpGKDs0" target="_blank">
-                        <i class="fab fa-tiktok"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="footer-section">
-                <h4>Institucional</h4>
-                <ul class="footer-links">
-                    <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
-                    <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
-                    <li><a href="terminos-condiciones.html">Términos y Condiciones</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h4>Ayuda</h4>
-                <ul class="footer-links">
-                    <li><a href="como-comprar.html">Cómo Comprar</a></li>
-                    <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
-                    <li><a href="index.html#contacto">Contáctanos</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h4>Enlaces Rápidos</h4>
-                <ul class="footer-links">
-                    <li><a href="materiales.html">Materiales</a></li>
-                    <li><a href="maquinas.html">Máquinas</a></li>
-                    <li><a href="index.html#clases">Clases</a></li>
-                </ul>
-            </div>
+  <header id="main-header">
+    <nav>
+      <a href="index.html" class="logo">
+        <img src="images/Logo-cread.webp" alt="Cread Peru Logo">
+        <div class="logo-text">
+          <span class="logo-name">Cread</span>
+          <span class="logo-tagline">Crea sin límites</span>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Creadperu. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="materiales.html">Materiales</a></li>
+        <li><a href="accesorios.html">Accesorios</a></li>
+        <li><a href="maquinas.html">Máquinas</a></li>
+        <li><a href="index.html#clases">Clases</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="cart-icon" title="Ver carrito"><i class="fas fa-shopping-bag"></i><span class="cart-count">0</span></div>
+      </div>
+    </nav>
+  </header>
 
-    <a href="https://wa.me/51985605911" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-    <script src="js/script.js"></script>
+  <main>
+    <div class="content-page-hero">
+      <h1>Preguntas Frecuentes</h1>
+    </div>
+    <div class="content-container">
+
+      <div class="faq-item">
+        <h3 class="faq-question">¿Realizan envíos a todo el Perú?</h3>
+        <p class="faq-answer">Sí, realizamos envíos a nivel nacional a través de operadores logísticos confiables. Los tiempos de entrega son de 1–2 días hábiles para Lima Metropolitana y 3–5 días hábiles para provincias. Ofrecemos envío GRATIS en Lima en compras mayores a S/ 150.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-question">¿Cuáles son los métodos de pago?</h3>
+        <p class="faq-answer">Aceptamos pagos mediante Yape, Plin y transferencias/depósitos bancarios (BCP, Interbank, BBVA, Scotiabank). No realizamos cobros con tarjeta de crédito ni débito en este momento.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-question">¿Tienen tienda física?</h3>
+        <p class="faq-answer">Actualmente operamos principalmente de manera virtual con despacho desde Lima. Sin embargo, realizamos talleres presenciales en fechas programadas. Sigue nuestras redes sociales o contáctanos por WhatsApp para conocer las próximas fechas.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-question">¿Cómo me inscribo a las clases?</h3>
+        <p class="faq-answer">Puedes solicitar información e inscribirte contactándonos directamente por WhatsApp al (+51) 985 605 911. También puedes enviarnos un mensaje a través del formulario de contacto de esta página.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-question">¿La cuerina viene vendida por metro?</h3>
+        <p class="faq-answer">Sí, la cuerina se vende por metro. En el carrito puedes especificar la cantidad de metros que necesitas. Si tienes dudas sobre qué cantidad necesitar para tu proyecto, consúltanos y te asesoramos con gusto.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-question">¿Los kits incluyen instrucciones?</h3>
+        <p class="faq-answer">Los kits incluyen todos los materiales necesarios. Si adquieres un kit y también tomas alguna de nuestras clases virtuales, recibirás acceso a las instrucciones paso a paso para fabricar tu bolso con esos materiales.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-question">¿Puedo hacer cambios o devoluciones?</h3>
+        <p class="faq-answer">Aceptamos cambios y devoluciones dentro de los 7 días calendario después de recibir tu pedido, siempre que el producto se encuentre en su estado original y sin haber sido usado. Contáctanos por WhatsApp para coordinar el proceso.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-question">¿Tienen descuentos para compras al por mayor?</h3>
+        <p class="faq-answer">Sí, ofrecemos precios especiales para compras al por mayor. Contáctanos directamente por WhatsApp indicando los productos y cantidades que necesitas y te cotizaremos de inmediato.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo-section">
+        <img src="images/c_logo_rounded.png" alt="Cread Logo" class="footer-logo">
+        <p class="footer-tagline">Tu aliada en costura y confección artesanal de bolsos y carteras desde Lima, Perú</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/share/1CcZ13brkQ/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/cread_peru?igsh=dmp5cnEwY25xdXN5" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@creadperu?_r=1&_t=ZS-921uZpGKDs0" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <div class="footer-payment-row">
+          <span>Pagos:</span>
+          <img src="images/Yape.jpg" alt="Yape" class="footer-payment-img">
+          <img src="images/plin.jpg" alt="Plin" class="footer-payment-img">
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Institucional</h4>
+        <ul class="footer-links">
+          <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+          <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
+          <li><a href="terminos-condiciones.html">Términos y Condiciones</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Ayuda</h4>
+        <ul class="footer-links">
+          <li><a href="como-comprar.html">Cómo Comprar</a></li>
+          <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+          <li><a href="index.html#contacto">Contáctanos</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Tienda</h4>
+        <ul class="footer-links">
+          <li><a href="materiales.html">Materiales</a></li>
+          <li><a href="accesorios.html">Accesorios</a></li>
+          <li><a href="maquinas.html">Máquinas</a></li>
+          <li><a href="index.html#clases">Clases</a></li>
+          <li><a href="cart.html">Mi Carrito</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Cread Peru. Todos los derechos reservados. Hecho con <i class="fas fa-heart" style="color:var(--clr-secondary)"></i> en Lima, Perú.</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/51985605911" class="whatsapp-float" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+  <script src="js/script.js"></script>
 </body>
-
 </html>

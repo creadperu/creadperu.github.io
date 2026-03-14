@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.personalarte.com.br)",
+      "Bash(dir \"C:\\\\PCC\\\\CreadPeru\"\" && wc -l \"C:PCCCreadPerucssstyle.css\" \"C:PCCCreadPerujsscript.js\" \"C:PCCCreadPeruindex.html \")",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}
