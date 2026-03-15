@@ -44,6 +44,75 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // ─── Dropdown — JS completo (desktop hover + mobile click) ──
+  let dropdownHideTimer = null;
+
+  document.querySelectorAll('.has-dropdown').forEach(item => {
+    const trigger = item.querySelector('.dropdown-trigger');
+    const menu    = item.querySelector('.dropdown-menu');
+    if (!trigger || !menu) return;
+
+    const openMenu = () => {
+      clearTimeout(dropdownHideTimer);
+      // Cierra cualquier otro dropdown abierto
+      document.querySelectorAll('.has-dropdown.open').forEach(i => {
+        if (i !== item) i.classList.remove('open');
+      });
+      item.classList.add('open');
+    };
+
+    const closeMenu = (delay = 0) => {
+      clearTimeout(dropdownHideTimer);
+      if (delay) {
+        dropdownHideTimer = setTimeout(() => item.classList.remove('open'), delay);
+      } else {
+        item.classList.remove('open');
+      }
+    };
+
+    // Desktop: mouseenter/mouseleave con delay de salida para poder llegar al menú
+    item.addEventListener('mouseenter', () => {
+      if (window.innerWidth <= 768) return;
+      openMenu();
+    });
+    item.addEventListener('mouseleave', () => {
+      if (window.innerWidth <= 768) return;
+      closeMenu(180);    // 180ms de gracia para mover el cursor al menú
+    });
+
+    // Click en trigger:
+    //   Desktop → navega a #categorias
+    //   Mobile  → abre/cierra el submenu inline
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      if (window.innerWidth > 768) {
+        // Desktop: navegar a #categorias
+        const cat = document.getElementById('categorias');
+        if (cat) cat.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        closeMenu();
+      } else {
+        // Mobile: toggle
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.has-dropdown.open').forEach(i => i.classList.remove('open'));
+        if (!isOpen) openMenu();
+      }
+    });
+
+    // Click en un ítem del menú → cerrar inmediatamente después
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => closeMenu());
+    });
+  });
+
+  // Click fuera → cerrar todos los dropdowns
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.has-dropdown')) {
+      document.querySelectorAll('.has-dropdown.open').forEach(i => i.classList.remove('open'));
+    }
+  });
+
   // ─── Announcement Bar Dismiss ────────────────────────────
   const announcementBar = document.getElementById('announcement-bar');
   const closeAnnouncement = document.getElementById('close-announcement');
@@ -79,12 +148,25 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // ─── Active Nav Link via IntersectionObserver ─────────────
+  // Sections grouped under "Productos" dropdown
+  const PRODUCTOS_IDS = new Set(['materiales', 'accesorios', 'maquinas']);
+  const dropdownTrigger = document.querySelector('.nav-links .dropdown-trigger');
+
+  // Collect all sections that have a nav anchor OR belong to Productos dropdown
   const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
-  const sections = [];
+  const allSectionIds = new Set();
+
   navAnchors.forEach(a => {
     const id = a.getAttribute('href').replace('#', '');
+    allSectionIds.add(id);
+  });
+  // Also add Productos sub-sections (materiales, accesorios, maquinas)
+  PRODUCTOS_IDS.forEach(id => allSectionIds.add(id));
+
+  const sections = [];
+  allSectionIds.forEach(id => {
     const el = document.getElementById(id);
-    if (el) sections.push({ el, a });
+    if (el) sections.push(el);
   });
 
   if (sections.length) {
@@ -92,9 +174,17 @@ document.addEventListener('DOMContentLoaded', function () {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const id = entry.target.id;
+          // Clear all active states
           navAnchors.forEach(a => a.classList.remove('active'));
-          const activeLink = document.querySelector(`.nav-links a[href="#${id}"]`);
-          if (activeLink) activeLink.classList.add('active');
+
+          if (PRODUCTOS_IDS.has(id)) {
+            // Activate the "Productos" dropdown trigger
+            if (dropdownTrigger) dropdownTrigger.classList.add('active');
+          } else {
+            // Activate the matching nav link
+            const activeLink = document.querySelector(`.nav-links a[href="#${id}"]`);
+            if (activeLink) activeLink.classList.add('active');
+          }
         }
       });
     }, {
@@ -102,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function () {
       threshold: 0
     });
 
-    sections.forEach(({ el }) => navObserver.observe(el));
+    sections.forEach(el => navObserver.observe(el));
   }
 
   // ─── Cart Icon Click ─────────────────────────────────────

@@ -29,10 +29,17 @@
       </a>
       <ul class="nav-links">
         <li><a href="#inicio" class="active">Inicio</a></li>
-        <li><a href="#materiales">Materiales</a></li>
-        <li><a href="#accesorios">Accesorios</a></li>
-        <li><a href="#maquinas">Máquinas</a></li>
+        <li class="has-dropdown">
+          <a href="#materiales" class="dropdown-trigger">Productos <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="#materiales"><i class="fas fa-layer-group"></i> Materiales</a></li>
+            <li><a href="#accesorios"><i class="fas fa-cut"></i> Accesorios</a></li>
+            <li><a href="#maquinas"><i class="fas fa-cog"></i> Máquinas</a></li>
+          </ul>
+        </li>
+        <li><a href="#promociones">Promociones</a></li>
         <li><a href="#clases">Clases</a></li>
+        <li><a href="#como-comprar">Cómo Comprar</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
       <div class="nav-right">
@@ -106,16 +113,16 @@
         <p>Envíos a todo el Perú</p>
       </div>
       <div class="feature-item">
-        <i class="fas fa-mobile-alt"></i>
-        <p>Pago con Yape y Plin</p>
-      </div>
-      <div class="feature-item">
         <i class="fas fa-award"></i>
         <p>Materiales de Calidad</p>
       </div>
       <div class="feature-item">
         <i class="fas fa-headset"></i>
         <p>Asesoría Personalizada</p>
+      </div>
+      <div class="feature-item">
+        <i class="fas fa-mobile-alt"></i>
+        <p>Pago con Yape y Plin</p>
       </div>
     </section>
 
@@ -288,7 +295,7 @@
     <section id="materiales" class="product-section reveal-on-scroll">
       <div class="catalog-section-header">
         <div class="section-header" style="text-align:left; margin-bottom:0">
-          <span class="eyebrow" style="text-align:left; display:block">Cuerina · Hilos · Telas</span>
+          <span class="section-eyebrow">Cuerina · Hilos · Telas</span>
           <h2>Materiales Premium</h2>
           <p>Cuerina sintética de alta calidad en docenas de colores, hilos resistentes y más</p>
         </div>
@@ -399,7 +406,7 @@
     <section id="accesorios" class="product-section reveal-on-scroll" style="background:var(--clr-bg)">
       <div class="catalog-section-header">
         <div class="section-header" style="text-align:left; margin-bottom:0">
-          <span class="eyebrow" style="text-align:left; display:block">Agujas · Cierres · Herramientas</span>
+          <span class="section-eyebrow">Agujas · Cierres · Herramientas</span>
           <h2>Accesorios de Costura</h2>
           <p>Todo lo que necesitas para acabados perfectos y profesionales en tus creaciones</p>
         </div>
@@ -534,11 +541,109 @@
       </div>
     </section>
 
+    <!-- ── PROMOCIONES ──────────────────────────────────── -->
+    <section id="promociones" class="promo-deals-section reveal-on-scroll">
+      <div class="section-header">
+        <span class="section-eyebrow">Ofertas exclusivas</span>
+        <h2 class="section-title">Promociones</h2>
+        <p class="section-subtitle">Las mejores ofertas de nuestra tienda — por tiempo limitado</p>
+      </div>
+
+      <div class="promo-deals-grid">
+
+        <!-- Deal 1: 3×2 Cierres -->
+        <div class="promo-deal-card">
+          <div class="deal-ribbon">3×2</div>
+          <div class="deal-img-wrapper">
+            <img src="images/Cierres.png" alt="Cierres Metálicos">
+          </div>
+          <div class="deal-body">
+            <div class="deal-badge-row">
+              <span class="deal-tag">Lleva 3, paga 2</span>
+            </div>
+            <h3>Cierres Metálicos</h3>
+            <p>Pack x5 · Alta resistencia para bolsos y carteras</p>
+            <div class="deal-pricing">
+              <span class="deal-price-original">S/ 26.70</span>
+              <span class="deal-price-final">S/ 17.80</span>
+            </div>
+            <button class="card-quick-add" data-name="Cierres Metálicos 3×2" data-price="17.80">Agregar al carrito</button>
+          </div>
+        </div>
+
+        <!-- Deal 2: 2×1 Hilos -->
+        <div class="promo-deal-card">
+          <div class="deal-ribbon deal-ribbon--gold">2×1</div>
+          <div class="deal-img-wrapper">
+            <img src="images/Hilos.png" alt="Hilos Premium">
+          </div>
+          <div class="deal-body">
+            <div class="deal-badge-row">
+              <span class="deal-tag deal-tag--gold">Lleva 2, paga 1</span>
+            </div>
+            <h3>Hilos Premium</h3>
+            <p>Pack surtido · Resistentes para costuras perfectas</p>
+            <div class="deal-pricing">
+              <span class="deal-price-original">S/ 25.80</span>
+              <span class="deal-price-final">S/ 12.90</span>
+            </div>
+            <button class="card-quick-add" data-name="Hilos Premium 2×1" data-price="12.90">Agregar al carrito</button>
+          </div>
+        </div>
+
+        <!-- Deal 3: Kit Agujas -->
+        <div class="promo-deal-card">
+          <div class="deal-ribbon deal-ribbon--green">KIT</div>
+          <div class="deal-img-wrapper">
+            <img src="images/agujas.png" alt="Kit de Agujas">
+          </div>
+          <div class="deal-body">
+            <div class="deal-badge-row">
+              <span class="deal-tag deal-tag--green">Pack iniciante</span>
+            </div>
+            <h3>Kit de Agujas Premium</h3>
+            <p>10 unidades · Múltiples calibres para toda tela</p>
+            <div class="deal-pricing">
+              <span class="deal-price-original">S/ 15.90</span>
+              <span class="deal-price-final">S/ 9.90</span>
+            </div>
+            <button class="card-quick-add" data-name="Kit Agujas Premium" data-price="9.90">Agregar al carrito</button>
+          </div>
+        </div>
+
+        <!-- Deal 4: 20% OFF Pack Cuerina Colores -->
+        <div class="promo-deal-card">
+          <div class="deal-ribbon">20% OFF</div>
+          <div class="deal-img-wrapper">
+            <img src="images/cuerinapremiumvarios.png" alt="Pack Cuerina Colores">
+          </div>
+          <div class="deal-body">
+            <div class="deal-badge-row">
+              <span class="deal-tag">Descuento especial</span>
+            </div>
+            <h3>Cuerina Premium — Pack Colores</h3>
+            <p>Muestras de 4 colores a tu elección · 1 m c/u</p>
+            <div class="deal-pricing">
+              <span class="deal-price-original">S/ 43.60</span>
+              <span class="deal-price-final">S/ 34.90</span>
+            </div>
+            <button class="card-quick-add" data-name="Pack Cuerina Colores 20% OFF" data-price="34.90">Agregar al carrito</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="promo-urgency">
+        <i class="fas fa-clock"></i>
+        <span>Ofertas válidas hasta agotar stock — ¡No te lo pierdas!</span>
+      </div>
+    </section>
+
     <!-- ── CATÁLOGO MÁQUINAS ───────────────────────────── -->
     <section id="maquinas" class="product-section reveal-on-scroll">
       <div class="catalog-section-header">
         <div class="section-header" style="text-align:left; margin-bottom:0">
-          <span class="eyebrow" style="text-align:left; display:block">Industriales · Domésticas</span>
+          <span class="section-eyebrow">Industriales · Domésticas</span>
           <h2>Máquinas Profesionales</h2>
           <p>Equipamiento de alta producción. Consulta por WhatsApp para asesoría y financiamiento</p>
         </div>
@@ -698,7 +803,7 @@
     <!-- ── CLASES ─────────────────────────────────────── -->
     <section id="clases" class="reveal-on-scroll">
       <div class="section-header">
-        <span class="eyebrow">Aprende con Expertas</span>
+        <span class="section-eyebrow">Aprende con Expertas</span>
         <h2>Clases de Confección</h2>
         <p>Domina el arte de crear bolsos y carteras artesanales desde cero</p>
       </div>
@@ -918,6 +1023,94 @@
       </div>
     </section>
 
+    <!-- ── CÓMO COMPRAR ──────────────────────────────── -->
+    <section id="como-comprar" class="como-comprar-section reveal-on-scroll">
+      <div class="section-header">
+        <span class="section-eyebrow">Proceso de compra</span>
+        <h2 class="section-title">¿Cómo Comprar?</h2>
+        <p class="section-subtitle">Comprar en Cread Peru es muy sencillo — sigue estos 6 pasos</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <i class="fas fa-search step-icon"></i>
+          <h3>Explora el Catálogo</h3>
+          <p>Navega por nuestros materiales, accesorios y máquinas. Filtra y ordena para encontrar lo que buscas.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <i class="fas fa-shopping-cart step-icon"></i>
+          <h3>Agrega al Carrito</h3>
+          <p>Haz clic en "Agregar al carrito" en los productos que deseas. Puedes agregar varios productos.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <i class="fas fa-clipboard-list step-icon"></i>
+          <h3>Revisa tu Pedido</h3>
+          <p>Ve al icono del carrito en la parte superior. Revisa los productos, cantidades y el total.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <i class="fab fa-whatsapp step-icon"></i>
+          <h3>Envía por WhatsApp</h3>
+          <p>Haz clic en "Finalizar Pedido por WhatsApp". Te enviamos el resumen directamente a tu chat.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">5</div>
+          <i class="fas fa-credit-card step-icon"></i>
+          <h3>Realiza el Pago</h3>
+          <p>Paga por Yape, Plin o transferencia bancaria. Te confirmamos la recepción del pago.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">6</div>
+          <i class="fas fa-box-open step-icon"></i>
+          <h3>Recibe tu Pedido</h3>
+          <p>Preparamos tu pedido y lo enviamos. Lima 1–2 días hábiles, provincias 3–5 días.</p>
+        </div>
+      </div>
+
+      <div class="como-comprar-info">
+
+        <div class="info-card">
+          <div class="info-card-icon"><i class="fas fa-wallet"></i></div>
+          <h4>Métodos de Pago</h4>
+          <ul class="info-list">
+            <li><i class="fas fa-check-circle"></i> <strong>Yape</strong> — transferencia instantánea</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Plin</strong> — transferencia instantánea</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Transferencia Bancaria</strong> — BCP, Interbank, BBVA</li>
+            <li><i class="fas fa-check-circle"></i> <strong>Depósito Bancario</strong> — cualquier agencia</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-icon"><i class="fas fa-truck"></i></div>
+          <h4>Información de Envíos</h4>
+          <ul class="info-list">
+            <li><i class="fas fa-map-marker-alt"></i> Lima Metropolitana: <strong>1–2 días hábiles</strong></li>
+            <li><i class="fas fa-map-marker-alt"></i> Provincias: <strong>3–5 días hábiles</strong></li>
+            <li><i class="fas fa-tag"></i> Envío <strong>GRATIS</strong> en Lima en compras &gt; S/ 150</li>
+            <li><i class="fas fa-info-circle"></i> Costo a provincias según destino y peso</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-icon"><i class="fab fa-whatsapp"></i></div>
+          <h4>¿Necesitas Ayuda?</h4>
+          <p class="info-card-text">Contáctanos directamente por WhatsApp o escríbenos al correo.</p>
+          <div class="info-contact-links">
+            <a href="https://wa.me/51985605911" class="info-contact-btn info-contact-btn--wa" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i> (+51) 985 605 911
+            </a>
+            <a href="mailto:pedidos@creadperu.com" class="info-contact-btn">
+              <i class="fas fa-envelope"></i> pedidos@creadperu.com
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <!-- ── CONTACTO ────────────────────────────────────── -->
     <section id="contacto" class="reveal-on-scroll">
       <div class="contacto-container">
@@ -1003,7 +1196,7 @@
       <div class="footer-section">
         <h4>Ayuda</h4>
         <ul class="footer-links">
-          <li><a href="#contacto">Cómo Comprar</a></li>
+          <li><a href="#como-comprar">Cómo Comprar</a></li>
           <li><a href="#faq">Preguntas Frecuentes</a></li>
           <li><a href="#contacto">Contáctanos</a></li>
         </ul>
@@ -1014,6 +1207,7 @@
         <ul class="footer-links">
           <li><a href="#materiales">Materiales</a></li>
           <li><a href="#accesorios">Accesorios</a></li>
+          <li><a href="#promociones">Promociones</a></li>
           <li><a href="#maquinas">Máquinas</a></li>
           <li><a href="#clases">Clases</a></li>
           <li><a href="cart.html">Mi Carrito</a></li>
